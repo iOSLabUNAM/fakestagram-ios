@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAD9233A8734009AC50D /* AppDelegate.swift */; };
 		E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FADB233A8734009AC50D /* SceneDelegate.swift */; };
-		E084FADE233A8734009AC50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FADD233A8734009AC50D /* ViewController.swift */; };
 		E084FAE1233A8734009AC50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084FADF233A8734009AC50D /* Main.storyboard */; };
 		E084FAE3233A8735009AC50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E084FAE2233A8735009AC50D /* Assets.xcassets */; };
 		E084FAE6233A8735009AC50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */; };
 		E084FAF1233A8735009AC50D /* fakestagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAF0233A8735009AC50D /* fakestagramTests.swift */; };
+		E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAFB233A8888009AC50D /* PostsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,6 @@
 		E084FAD6233A8734009AC50D /* fakestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fakestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084FAD9233A8734009AC50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E084FADB233A8734009AC50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E084FADD233A8734009AC50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E084FAE0233A8734009AC50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E084FAE2233A8735009AC50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E084FAE5233A8735009AC50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		E084FAEC233A8735009AC50D /* fakestagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fakestagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084FAF0233A8735009AC50D /* fakestagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakestagramTests.swift; sourceTree = "<group>"; };
 		E084FAF2233A8735009AC50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E084FAFB233A8888009AC50D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			children = (
 				E084FAD9233A8734009AC50D /* AppDelegate.swift */,
 				E084FADB233A8734009AC50D /* SceneDelegate.swift */,
-				E084FADD233A8734009AC50D /* ViewController.swift */,
+				E084FAFB233A8888009AC50D /* PostsTableViewController.swift */,
 				E084FADF233A8734009AC50D /* Main.storyboard */,
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
@@ -200,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E084FADE233A8734009AC50D /* ViewController.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
+				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
