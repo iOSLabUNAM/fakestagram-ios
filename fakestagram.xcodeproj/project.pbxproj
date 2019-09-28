@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E038FCED233FC78600E28571 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038FCEC233FC78600E28571 /* PostViewController.swift */; };
 		E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAD9233A8734009AC50D /* AppDelegate.swift */; };
 		E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FADB233A8734009AC50D /* SceneDelegate.swift */; };
 		E084FAE1233A8734009AC50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084FADF233A8734009AC50D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E038FCEC233FC78600E28571 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E084FAD6233A8734009AC50D /* fakestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fakestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084FAD9233A8734009AC50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E084FADB233A8734009AC50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				E084FADB233A8734009AC50D /* SceneDelegate.swift */,
 				E084FAFB233A8888009AC50D /* PostsTableViewController.swift */,
 				E084FADF233A8734009AC50D /* Main.storyboard */,
+				E038FCEC233FC78600E28571 /* PostViewController.swift */,
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E038FCED233FC78600E28571 /* PostViewController.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
 				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
