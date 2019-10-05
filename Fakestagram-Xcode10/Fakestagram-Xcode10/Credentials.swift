@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+enum Credentials{
+    case apiToken
+    
+    func get()-> String?{
+        switch self {
+        case .apiToken:
+            return "f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e"
+        }
+    }
+    
+    func set(value: String) ->Bool{
+        return true;
+    }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C5F57952348203100488E96 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F57942348203100488E96 /* Credentials.swift */; };
+		6C5F57982348207400488E96 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F57972348207400488E96 /* Cliente.swift */; };
 		7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEB0233F1B1B0004C30D /* AppDelegate.swift */; };
 		7701BEB6233F1B1B0004C30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB4233F1B1B0004C30D /* Main.storyboard */; };
 		7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB7233F1B1C0004C30D /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C5F57942348203100488E96 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		6C5F57972348207400488E96 /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		7701BEAD233F1B1B0004C30D /* Fakestagram-Xcode10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fakestagram-Xcode10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7701BEB0233F1B1B0004C30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7701BEB5233F1B1B0004C30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C5F57962348206000488E96 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				6C5F57972348207400488E96 /* Cliente.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		7701BEA4233F1B1B0004C30D = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +89,14 @@
 		7701BEAF233F1B1B0004C30D /* Fakestagram-Xcode10 */ = {
 			isa = PBXGroup;
 			children = (
+				6C5F57962348206000488E96 /* DataSource */,
 				7701BEB0233F1B1B0004C30D /* AppDelegate.swift */,
 				7701BED0233F1B540004C30D /* PostsTableViewController.swift */,
 				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
+				6C5F57942348203100488E96 /* Credentials.swift */,
 			);
 			path = "Fakestagram-Xcode10";
 			sourceTree = "<group>";
@@ -197,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5F57982348207400488E96 /* Cliente.swift in Sources */,
+				6C5F57952348203100488E96 /* Credentials.swift in Sources */,
 				7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
 			);
