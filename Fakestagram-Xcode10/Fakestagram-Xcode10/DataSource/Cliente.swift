@@ -38,10 +38,10 @@ class Cliente{
                 debugPrint(error)
                 return
             }
-            let res = ClientResponse(response)
-            if res.successful? {
-                
-            }
+            /*let res = ClientResponse(response)
+             if res.successful? {
+             
+             }*/
             }.resume()
         
     }

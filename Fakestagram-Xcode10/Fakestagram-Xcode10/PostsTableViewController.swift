@@ -17,6 +17,8 @@ struct Post: Codable {
     let createdAt: String
     var liked: Bool
     let location: String
+    //let imagen: UIImage?
+    
     
     func likesCountText() -> String {
         return "\(likesCount) likes"
@@ -42,7 +44,7 @@ class PostsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPosts() { data in
+        loadPosts { data in
             DispatchQueue.main.async {
                 self.posts = data
                 self.tableView.reloadData()
@@ -113,15 +115,17 @@ class PostsTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detalle"{
+            let det = segue.destination as! PostViewController
+            let indx = self.tableView.indexPathForSelectedRow?.row ?? 0
+            posts[indx].load { img in
+                det.imagen.image = img
+            }
+        }
+    }
     
     func loadPosts(successful: @escaping ([Post]) -> Void) {
         var request = URLRequest(url: URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts")!)
@@ -130,7 +134,7 @@ class PostsTableViewController: UITableViewController {
         request.httpMethod = "get"
         request.addValue("Bearer f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e", forHTTPHeaderField: "Authorization")
         
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
             if error != nil || data == nil {
                 return
             }

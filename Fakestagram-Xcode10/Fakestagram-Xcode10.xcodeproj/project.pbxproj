@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2C50022348F45900CDE263 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C50012348F45900CDE263 /* RequestBuilder.swift */; };
 		6C5F57952348203100488E96 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F57942348203100488E96 /* Credentials.swift */; };
 		6C5F57982348207400488E96 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F57972348207400488E96 /* Cliente.swift */; };
+		6C5F579A234827B200488E96 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F5799234827B200488E96 /* PostViewController.swift */; };
 		7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEB0233F1B1B0004C30D /* AppDelegate.swift */; };
 		7701BEB6233F1B1B0004C30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB4233F1B1B0004C30D /* Main.storyboard */; };
 		7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB7233F1B1C0004C30D /* Assets.xcassets */; };
 		7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */; };
-		7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */; };
+		7701BEC6233F1B1C0004C30D /* RequestBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* RequestBuilderTest.swift */; };
 		7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BED0233F1B540004C30D /* PostsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C2C50012348F45900CDE263 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		6C5F57942348203100488E96 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		6C5F57972348207400488E96 /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
+		6C5F5799234827B200488E96 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		7701BEAD233F1B1B0004C30D /* Fakestagram-Xcode10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fakestagram-Xcode10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7701BEB0233F1B1B0004C30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7701BEB5233F1B1B0004C30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 		7701BEBA233F1B1C0004C30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7701BEBC233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7701BEC1233F1B1C0004C30D /* Fakestagram-Xcode10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fakestagram-Xcode10Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakestagram_Xcode10Tests.swift; sourceTree = "<group>"; };
+		7701BEC5233F1B1C0004C30D /* RequestBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTest.swift; sourceTree = "<group>"; };
 		7701BEC7233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7701BED0233F1B540004C30D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				6C5F57972348207400488E96 /* Cliente.swift */,
+				6C2C50012348F45900CDE263 /* RequestBuilder.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
+				6C5F5799234827B200488E96 /* PostViewController.swift */,
 				6C5F57942348203100488E96 /* Credentials.swift */,
 			);
 			path = "Fakestagram-Xcode10";
@@ -104,7 +110,7 @@
 		7701BEC4233F1B1C0004C30D /* Fakestagram-Xcode10Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */,
+				7701BEC5233F1B1C0004C30D /* RequestBuilderTest.swift */,
 				7701BEC7233F1B1C0004C30D /* Info.plist */,
 			);
 			path = "Fakestagram-Xcode10Tests";
@@ -214,7 +220,9 @@
 				6C5F57982348207400488E96 /* Cliente.swift in Sources */,
 				6C5F57952348203100488E96 /* Credentials.swift in Sources */,
 				7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */,
+				6C2C50022348F45900CDE263 /* RequestBuilder.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
+				6C5F579A234827B200488E96 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */,
+				7701BEC6233F1B1C0004C30D /* RequestBuilderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
