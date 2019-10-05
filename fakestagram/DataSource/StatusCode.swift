@@ -15,7 +15,7 @@ enum StatusCode: Int {
     case redirection
     case clientError
     case serverError
-    
+
     public init(rawValue: Int) {
         switch rawValue {
             case 100, 101, 102:
