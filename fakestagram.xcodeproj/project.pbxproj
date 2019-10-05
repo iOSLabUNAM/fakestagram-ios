@@ -15,6 +15,10 @@
 		E084FAE6233A8735009AC50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */; };
 		E084FAF1233A8735009AC50D /* fakestagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAF0233A8735009AC50D /* fakestagramTests.swift */; };
 		E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAFB233A8888009AC50D /* PostsTableViewController.swift */; };
+		E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9642348018200DA9D1A /* Credentials.swift */; };
+		E0E8B9682348036D00DA9D1A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9672348036D00DA9D1A /* Client.swift */; };
+		E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96923481D5A00DA9D1A /* StatusCode.swift */; };
+		E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		E084FAF0233A8735009AC50D /* fakestagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakestagramTests.swift; sourceTree = "<group>"; };
 		E084FAF2233A8735009AC50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E084FAFB233A8888009AC50D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		E0E8B9642348018200DA9D1A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		E0E8B9672348036D00DA9D1A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		E0E8B96923481D5A00DA9D1A /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		E084FAD8233A8734009AC50D /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8B9662348035800DA9D1A /* DataSource */,
 				E084FAD9233A8734009AC50D /* AppDelegate.swift */,
 				E084FADB233A8734009AC50D /* SceneDelegate.swift */,
 				E084FAFB233A8888009AC50D /* PostsTableViewController.swift */,
@@ -89,6 +98,7 @@
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
+				E0E8B9642348018200DA9D1A /* Credentials.swift */,
 			);
 			path = fakestagram;
 			sourceTree = "<group>";
@@ -100,6 +110,16 @@
 				E084FAF2233A8735009AC50D /* Info.plist */,
 			);
 			path = fakestagramTests;
+			sourceTree = "<group>";
+		};
+		E0E8B9662348035800DA9D1A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8B9672348036D00DA9D1A /* Client.swift */,
+				E0E8B96923481D5A00DA9D1A /* StatusCode.swift */,
+				E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */,
 				E038FCED233FC78600E28571 /* PostViewController.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
+				E0E8B9682348036D00DA9D1A /* Client.swift in Sources */,
+				E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */,
+				E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */,
 				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
 			);
