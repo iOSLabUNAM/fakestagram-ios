@@ -20,6 +20,9 @@
 		E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96923481D5A00DA9D1A /* StatusCode.swift */; };
 		E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */; };
 		E0E8B96E2348203B00DA9D1A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96D2348203B00DA9D1A /* RequestBuilder.swift */; };
+		E0E8B971234916D100DA9D1A /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B970234916D100DA9D1A /* RestClient.swift */; };
+		E0E8B974234918FF00DA9D1A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B973234918FF00DA9D1A /* Account.swift */; };
+		E0E8B9762349197100DA9D1A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9752349197100DA9D1A /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		E0E8B96923481D5A00DA9D1A /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
 		E0E8B96D2348203B00DA9D1A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		E0E8B970234916D100DA9D1A /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		E0E8B973234918FF00DA9D1A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E0E8B9752349197100DA9D1A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,8 @@
 		E084FAD8233A8734009AC50D /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8B972234918ED00DA9D1A /* Models */,
+				E0E8B96F234916AA00DA9D1A /* Network */,
 				E0E8B9662348035800DA9D1A /* DataSource */,
 				E084FAD9233A8734009AC50D /* AppDelegate.swift */,
 				E084FADB233A8734009AC50D /* SceneDelegate.swift */,
@@ -117,12 +125,29 @@
 		E0E8B9662348035800DA9D1A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8B970234916D100DA9D1A /* RestClient.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E0E8B96F234916AA00DA9D1A /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				E0E8B9672348036D00DA9D1A /* Client.swift */,
 				E0E8B96923481D5A00DA9D1A /* StatusCode.swift */,
 				E0E8B96B23481E1700DA9D1A /* HttpResponse.swift */,
 				E0E8B96D2348203B00DA9D1A /* RequestBuilder.swift */,
 			);
-			path = DataSource;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E0E8B972234918ED00DA9D1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8B973234918FF00DA9D1A /* Account.swift */,
+				E0E8B9752349197100DA9D1A /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,13 +252,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */,
+				E0E8B974234918FF00DA9D1A /* Account.swift in Sources */,
 				E038FCED233FC78600E28571 /* PostViewController.swift in Sources */,
+				E0E8B9762349197100DA9D1A /* Post.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
 				E0E8B96E2348203B00DA9D1A /* RequestBuilder.swift in Sources */,
 				E0E8B9682348036D00DA9D1A /* Client.swift in Sources */,
 				E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */,
 				E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */,
 				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
+				E0E8B971234916D100DA9D1A /* RestClient.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
