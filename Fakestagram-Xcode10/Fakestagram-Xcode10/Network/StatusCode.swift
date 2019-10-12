@@ -1,8 +1,8 @@
 //
-//  StatusCode.swift
+//  File.swift
 //  Fakestagram-Xcode10
 //
-//  Created by Pedro Carlos Monzalvo Navarro on 10/5/19.
+//  Created by Pedro Carlos Monzalvo Navarro on 11/10/19.
 //  Copyright © 2019 unam. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ enum StatusCode: Int {
     case redirection
     case clientError
     case serverError
-    
+
     public init(rawValue: Int) {
         switch rawValue {
         case 100, 101, 102:
