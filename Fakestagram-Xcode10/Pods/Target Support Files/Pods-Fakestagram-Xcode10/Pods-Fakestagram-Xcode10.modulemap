@@ -1,0 +1,6 @@
+framework module Pods_Fakestagram_Xcode10 {
+  umbrella header "Pods-Fakestagram-Xcode10-umbrella.h"
+
+  export *
+  module * { export * }
+}
