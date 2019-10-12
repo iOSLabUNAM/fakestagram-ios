@@ -1,0 +1,16 @@
+PODS:
+  - DVR (2.0.0)
+
+DEPENDENCIES:
+  - DVR
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DVR
+
+SPEC CHECKSUMS:
+  DVR: 062c287b9dc613a84120e44640176e4ef3ecf943
+
+PODFILE CHECKSUM: d9d5d9d01e457a56ba65f895a35d12a493621452
+
+COCOAPODS: 1.5.3
