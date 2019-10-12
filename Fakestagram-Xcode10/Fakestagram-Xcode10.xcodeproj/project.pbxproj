@@ -14,6 +14,20 @@
 		7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */; };
 		7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */; };
 		7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BED0233F1B540004C30D /* PostsTableViewController.swift */; };
+		7909C65A23521FEC000B0380 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65923521FEC000B0380 /* Credentials.swift */; };
+		7909C65C23522002000B0380 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65B23522002000B0380 /* PostViewController.swift */; };
+		7909C65E23522061000B0380 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65D23522061000B0380 /* Client.swift */; };
+		7909C66023522082000B0380 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65F23522082000B0380 /* HttpResponse.swift */; };
+		7909C66223522091000B0380 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C66123522091000B0380 /* RequestBuilder.swift */; };
+		7909C666235220BC000B0380 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C665235220BC000B0380 /* StatusCode.swift */; };
+		7909C6682352214C000B0380 /* CodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C6672352214C000B0380 /* CodableSerializer.swift */; };
+		7909C66A2352216E000B0380 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C6692352216E000B0380 /* RestClient.swift */; };
+		7909C66C2352218A000B0380 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C66B2352218A000B0380 /* Account.swift */; };
+		7909C66E235221A3000B0380 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C66D235221A3000B0380 /* Post.swift */; };
+		7909C67023522287000B0380 /* RequestBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C66F23522287000B0380 /* RequestBuilderTest.swift */; };
+		7909C672235222CC000B0380 /* RestClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C671235222CC000B0380 /* RestClientTest.swift */; };
+		7909C6752352232F000B0380 /* posts.successful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7909C6742352232F000B0380 /* posts.successful.json */; };
+		7909C67723522339000B0380 /* show_post.successful.json in Resources */ = {isa = PBXBuildFile; fileRef = 7909C67623522339000B0380 /* show_post.successful.json */; };
 		F2AD903247DD33845EA3C7FB /* Pods_Fakestagram_Xcode10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F32B394EBB804D9C3E14052 /* Pods_Fakestagram_Xcode10.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +55,20 @@
 		7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakestagram_Xcode10Tests.swift; sourceTree = "<group>"; };
 		7701BEC7233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7701BED0233F1B540004C30D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		7909C65923521FEC000B0380 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		7909C65B23522002000B0380 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		7909C65D23522061000B0380 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		7909C65F23522082000B0380 /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		7909C66123522091000B0380 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		7909C665235220BC000B0380 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		7909C6672352214C000B0380 /* CodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSerializer.swift; sourceTree = "<group>"; };
+		7909C6692352216E000B0380 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		7909C66B2352218A000B0380 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		7909C66D235221A3000B0380 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7909C66F23522287000B0380 /* RequestBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTest.swift; sourceTree = "<group>"; };
+		7909C671235222CC000B0380 /* RestClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientTest.swift; sourceTree = "<group>"; };
+		7909C6742352232F000B0380 /* posts.successful.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = posts.successful.json; path = ../../../fakestagramTests/casettes/posts.successful.json; sourceTree = "<group>"; };
+		7909C67623522339000B0380 /* show_post.successful.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = show_post.successful.json; path = ../../../fakestagramTests/casettes/show_post.successful.json; sourceTree = "<group>"; };
 		7F32B394EBB804D9C3E14052 /* Pods_Fakestagram_Xcode10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram_Xcode10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC485714B1528A06F25D0EB3 /* Pods_Fakestagram_Xcode10Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram_Xcode10Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCED9AC22B8D6D07928F1A67 /* Pods-Fakestagram-Xcode10Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,12 +137,17 @@
 		7701BEAF233F1B1B0004C30D /* Fakestagram-Xcode10 */ = {
 			isa = PBXGroup;
 			children = (
+				7909C65823521FD9000B0380 /* Network */,
+				7909C65723521FD3000B0380 /* DataSource */,
+				7909C65623521FCD000B0380 /* Model */,
 				7701BEB0233F1B1B0004C30D /* AppDelegate.swift */,
 				7701BED0233F1B540004C30D /* PostsTableViewController.swift */,
 				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
+				7909C65923521FEC000B0380 /* Credentials.swift */,
+				7909C65B23522002000B0380 /* PostViewController.swift */,
 			);
 			path = "Fakestagram-Xcode10";
 			sourceTree = "<group>";
@@ -122,10 +155,51 @@
 		7701BEC4233F1B1C0004C30D /* Fakestagram-Xcode10Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7909C673235222E9000B0380 /* casettes */,
 				7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */,
 				7701BEC7233F1B1C0004C30D /* Info.plist */,
+				7909C66F23522287000B0380 /* RequestBuilderTest.swift */,
+				7909C671235222CC000B0380 /* RestClientTest.swift */,
 			);
 			path = "Fakestagram-Xcode10Tests";
+			sourceTree = "<group>";
+		};
+		7909C65623521FCD000B0380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7909C66B2352218A000B0380 /* Account.swift */,
+				7909C66D235221A3000B0380 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7909C65723521FD3000B0380 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7909C6672352214C000B0380 /* CodableSerializer.swift */,
+				7909C6692352216E000B0380 /* RestClient.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		7909C65823521FD9000B0380 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7909C65D23522061000B0380 /* Client.swift */,
+				7909C65F23522082000B0380 /* HttpResponse.swift */,
+				7909C66123522091000B0380 /* RequestBuilder.swift */,
+				7909C665235220BC000B0380 /* StatusCode.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7909C673235222E9000B0380 /* casettes */ = {
+			isa = PBXGroup;
+			children = (
+				7909C67623522339000B0380 /* show_post.successful.json */,
+				7909C6742352232F000B0380 /* posts.successful.json */,
+			);
+			path = casettes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7909C6752352232F000B0380 /* posts.successful.json in Resources */,
+				7909C67723522339000B0380 /* show_post.successful.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +377,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7909C66223522091000B0380 /* RequestBuilder.swift in Sources */,
+				7909C66C2352218A000B0380 /* Account.swift in Sources */,
+				7909C66023522082000B0380 /* HttpResponse.swift in Sources */,
+				7909C66E235221A3000B0380 /* Post.swift in Sources */,
+				7909C666235220BC000B0380 /* StatusCode.swift in Sources */,
+				7909C65C23522002000B0380 /* PostViewController.swift in Sources */,
+				7909C65A23521FEC000B0380 /* Credentials.swift in Sources */,
 				7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */,
+				7909C65E23522061000B0380 /* Client.swift in Sources */,
+				7909C6682352214C000B0380 /* CodableSerializer.swift in Sources */,
+				7909C66A2352216E000B0380 /* RestClient.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +397,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */,
+				7909C672235222CC000B0380 /* RestClientTest.swift in Sources */,
+				7909C67023522287000B0380 /* RequestBuilderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,13 +554,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2BL68NTA5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "unam.Fakestagram-Xcode10";
+				PRODUCT_BUNDLE_IDENTIFIER = unam.Fakestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,13 +573,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2BL68NTA5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "unam.Fakestagram-Xcode10";
+				PRODUCT_BUNDLE_IDENTIFIER = unam.Fakestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
