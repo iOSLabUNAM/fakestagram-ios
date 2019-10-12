@@ -48,15 +48,19 @@ class RestClient<T: Codable> {
 
     // eg. GET /posts/
     // eg. GET /posts/:id
-    func show(id: String, success: @escaping (T?) -> Void) { // aka read
-        client.get(path: "\(basePath)/\(id)") { [unowned self] data in
+    func show(id: String? = nil, success: @escaping (T?) -> Void) {
+        var path = basePath
+        if let uid = id {
+            path += "/\(uid)"
+        }
+        client.get(path: path) { [unowned self] data in
             guard let data = data else {
-                success(nil)
+                DispatchQueue.main.async { success(nil) }
                 return
             }
             do {
                 let json = try self.decoder.decode(T.self, from: data)
-                success(json)
+                DispatchQueue.main.async { success(json) }
             } catch let err {
                 print("Invalid JSON format: \(err.localizedDescription)")
             }
