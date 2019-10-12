@@ -11,14 +11,13 @@ import DVR
 @testable import fakestagram
 
 class RestClientTest: XCTestCase {
-
     func testShowPosts() {
         let session = Session(cassetteName: "posts.successful")
         let client = Client(session: session, baseUrl: "https://fakestagram-api.herokuapp.com")
         let restClient = RestClient<[Post]>(client: client, basePath: "/api/v1/posts")
         let exp = expectation(description: "Successfull index posts")
-        
-        restClient.show() { posts in
+
+        restClient.show { posts in
             exp.fulfill()
             XCTAssertNotNil(posts)
             XCTAssertEqual(posts!.count, 25)
@@ -32,10 +31,10 @@ class RestClientTest: XCTestCase {
     func testShowPost() {
         let session = Session(cassetteName: "show_post.successful")
         let client = Client(session: session, baseUrl: "https://fakestagram-api.herokuapp.com")
-        
+
         let restClient = RestClient<Post>(client: client, basePath: "/api/v1/posts")
         let exp = expectation(description: "Successfull index posts")
-        
+
         restClient.show(id: "228") { post in
             exp.fulfill()
             XCTAssertNotNil(post)
@@ -45,5 +44,4 @@ class RestClientTest: XCTestCase {
 
         waitForExpectations(timeout: 2, handler: nil)
     }
-
 }
