@@ -1,9 +1,9 @@
 //
 //  Account.swift
-//  fakestagram
+//  Fakestagram-Xcode10
 //
-//  Created by LuisE on 10/5/19.
-//  Copyright © 2019 3zcurdia. All rights reserved.
+//  Created by Ricardo Hernandez D4 on 10/12/19.
+//  Copyright © 2019 unam. All rights reserved.
 //
 
 import Foundation

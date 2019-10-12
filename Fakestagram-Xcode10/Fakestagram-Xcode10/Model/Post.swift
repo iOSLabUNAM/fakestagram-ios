@@ -1,9 +1,9 @@
 //
 //  Post.swift
-//  fakestagram
+//  Fakestagram-Xcode10
 //
-//  Created by LuisE on 10/5/19.
-//  Copyright © 2019 3zcurdia. All rights reserved.
+//  Created by Ricardo Hernandez D4 on 10/12/19.
+//  Copyright © 2019 unam. All rights reserved.
 //
 
 import Foundation
@@ -18,15 +18,15 @@ struct Post: Codable {
     let createdAt: String
     var liked: Bool
     let location: String
-
+    
     func likesCountText() -> String {
         return "\(likesCount) likes"
     }
-
+    
     func commentsCountText() -> String {
         return "\(commentsCount) comments"
     }
-
+    
     func load(_ image: @escaping (UIImage) -> Void) {
         guard let urlString = imageUrl, let url = URL(string: urlString) else { return }
         DispatchQueue.global(qos: .background).async {
