@@ -10,17 +10,16 @@ import UIKit
 
 class PostsTableViewController: UITableViewController {
     static let cellId = "PostCell"
-    var posts = [Post]()
+    var posts: [Post]? {
+        didSet { self.tableView.reloadData() }
+    }
+    let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPosts { data in
-            DispatchQueue.main.async {
-                self.posts = data
-                self.tableView.reloadData()
-            }
+        client.show { [unowned self] data in
+            self.posts = data
         }
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,11 +34,12 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return posts?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostsTableViewController.cellId, for: indexPath)
+        guard let posts = self.posts else { return cell }
         posts[indexPath.row].load { img in
             cell.imageView?.contentMode = .scaleAspectFit
             cell.imageView?.image = img
@@ -94,32 +94,8 @@ class PostsTableViewController: UITableViewController {
         if segue.identifier == "showPostSegue" {
             let dest = segue.destination as! PostViewController
             let idx = self.tableView.indexPathForSelectedRow?.row ?? 0
-            dest.post = posts[idx]
+            dest.post = posts?[idx]
         }
      }
 
-    func loadPosts(successful: @escaping ([Post]) -> Void) {
-        let url = URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts")!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "get"
-        request.addValue("Bearer f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e", forHTTPHeaderField: "Authorization")
-
-        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if error != nil || data == nil {
-                return
-            }
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            do {
-                guard let data = data else { print("Empty response"); return }
-                let json = try decoder.decode([Post].self, from: data)
-                successful(json)
-            } catch let err {
-                print("Unable to parse successfull response: \(err.localizedDescription)")
-            }
-        }
-        task.resume()
-    }
 }
