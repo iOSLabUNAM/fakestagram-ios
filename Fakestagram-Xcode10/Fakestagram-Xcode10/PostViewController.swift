@@ -8,17 +8,6 @@
 
 import UIKit
 
-struct Author: Codable {
-    let name: String
-}
-struct Comment: Codable {
-    let content: String
-    let author: Author?
-}
-struct Like: Codable {
-    let author: Author
-}
-
 class PostViewController: UIViewController {
     var post: Post? {
         didSet {

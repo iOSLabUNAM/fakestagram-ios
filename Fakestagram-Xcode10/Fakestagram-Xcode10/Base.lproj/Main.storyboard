@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FMj-rU-tzk" kind="show" identifier="showPostSegue" id="Jyz-ne-rNJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,21 +65,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-em-6tD">
-                                <rect key="frame" x="57" y="87" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-em-6tD">
+                                <rect key="frame" x="20" y="70" width="374" height="377"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Mh-em-6tD" secondAttribute="height" multiplier="120:121" id="DRH-qH-p4a"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Mh-em-6tD" firstAttribute="top" secondItem="6nV-h5-4eV" secondAttribute="top" constant="50" id="169-Ua-lr1"/>
+                            <constraint firstItem="6nV-h5-4eV" firstAttribute="trailing" secondItem="6Mh-em-6tD" secondAttribute="trailing" constant="20" id="QuW-aw-aAK"/>
+                            <constraint firstItem="6Mh-em-6tD" firstAttribute="leading" secondItem="6nV-h5-4eV" secondAttribute="leading" constant="20" id="p9f-Gp-5wZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6nV-h5-4eV"/>
                     </view>
                     <connections>
-                        <outlet property="imagen" destination="6Mh-em-6tD" id="ofS-Ig-W5r"/>
+                        <outlet property="imageView" destination="6Mh-em-6tD" id="7Ws-lJ-JnZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhn-kG-TLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="116"/>
+            <point key="canvasLocation" x="1678" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo.fill" width="16" height="16"/>
+    </resources>
 </document>
