@@ -150,22 +150,18 @@
 		E084FAD8233A8734009AC50D /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				E0E25466235B7BCE00C55767 /* ViewControllers */,
 				E0C93E9E23523B4700FD330C /* Views */,
 				E0E8B972234918ED00DA9D1A /* Models */,
 				E0E8B96F234916AA00DA9D1A /* Network */,
 				E0E8B9662348035800DA9D1A /* DataSource */,
+				E0E25467235B7BE500C55767 /* Utils */,
 				E084FAD9233A8734009AC50D /* AppDelegate.swift */,
 				E084FADB233A8734009AC50D /* SceneDelegate.swift */,
 				E084FADF233A8734009AC50D /* Main.storyboard */,
-				E038FCEC233FC78600E28571 /* PostViewController.swift */,
-				E0A9ED50235A782F00A0527E /* PostsViewController.swift */,
-				E0E25462235B675100C55767 /* CameraViewController.swift */,
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
-				E0E8B9642348018200DA9D1A /* Credentials.swift */,
-				E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */,
-				E0E25464235B6C0500C55767 /* UIImage+Base64.swift */,
 			);
 			path = fakestagram;
 			sourceTree = "<group>";
@@ -200,6 +196,26 @@
 				E0C93EA32352452900FD330C /* AuthorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E0E25466235B7BCE00C55767 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0A9ED50235A782F00A0527E /* PostsViewController.swift */,
+				E038FCEC233FC78600E28571 /* PostViewController.swift */,
+				E0E25462235B675100C55767 /* CameraViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0E25467235B7BE500C55767 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8B9642348018200DA9D1A /* Credentials.swift */,
+				E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */,
+				E0E25464235B6C0500C55767 /* UIImage+Base64.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E0E8B9662348035800DA9D1A /* DataSource */ = {
