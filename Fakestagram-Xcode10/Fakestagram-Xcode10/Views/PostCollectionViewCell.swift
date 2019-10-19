@@ -13,11 +13,11 @@ class PostCollectionViewCell: UICollectionViewCell {
     static let identifier = "PostCell"
     var post: Post? {
         didSet{
-            updateContent()
+            updateView()
         }
     }
     
-    @IBOutlet weak var authorView: UIView!
+    @IBOutlet weak var authorView: AuthorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -30,18 +30,18 @@ class PostCollectionViewCell: UICollectionViewCell {
     }
     
     func reset(){
-        self.imageView.image = nil
-        self.likeCounter.text = "Likes"
-        self.titleLabel.text = "Loading..."
+        self.imageView.image = UIImage(named: "loading")
+        self.likeCounter.text = ""
+        self.titleLabel.text = ""
     }
     
-    func updateContent(){
+    func updateView(){
         reset()
         guard let post = self.post else { return }
-        
-        self.titleLabel?.text = "hola"
-        self.likeCounter.text = String(post.likesCount)
-        post.load { [unowned self ]img in
+        self.authorView.author = post.author
+        self.titleLabel?.text = post.title
+        self.likeCounter.text = "\(post.likesCount) likes"
+        post.load { [unowned self] img in
             self.imageView.image = img
         }
     }

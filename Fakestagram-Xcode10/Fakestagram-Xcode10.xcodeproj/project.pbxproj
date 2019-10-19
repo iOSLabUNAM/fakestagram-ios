@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB7233F1B1C0004C30D /* Assets.xcassets */; };
 		7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */; };
 		7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */; };
-		7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BED0233F1B540004C30D /* PostsTableViewController.swift */; };
 		7909C65A23521FEC000B0380 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65923521FEC000B0380 /* Credentials.swift */; };
 		7909C65C23522002000B0380 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65B23522002000B0380 /* PostViewController.swift */; };
 		7909C65E23522061000B0380 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65D23522061000B0380 /* Client.swift */; };
@@ -63,7 +62,6 @@
 		7701BEC1233F1B1C0004C30D /* Fakestagram-Xcode10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fakestagram-Xcode10Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakestagram_Xcode10Tests.swift; sourceTree = "<group>"; };
 		7701BEC7233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7701BED0233F1B540004C30D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		7909C65923521FEC000B0380 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		7909C65B23522002000B0380 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		7909C65D23522061000B0380 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -155,14 +153,13 @@
 		7701BEAF233F1B1B0004C30D /* Fakestagram-Xcode10 */ = {
 			isa = PBXGroup;
 			children = (
-				79762856235A787300055EC7 /* PostsViewController.swift */,
 				7909C67823523B52000B0380 /* Views */,
 				7909C65823521FD9000B0380 /* Network */,
 				7909C65723521FD3000B0380 /* DataSource */,
 				7909C65623521FCD000B0380 /* Model */,
 				7701BEB0233F1B1B0004C30D /* AppDelegate.swift */,
-				7701BED0233F1B540004C30D /* PostsTableViewController.swift */,
 				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
+				79762856235A787300055EC7 /* PostsViewController.swift */,
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
@@ -391,20 +388,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DVR/DVR.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DVR.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -425,7 +417,6 @@
 				7909C65A23521FEC000B0380 /* Credentials.swift in Sources */,
 				7909C68023524576000B0380 /* Like.swift in Sources */,
 				7909C6822352458A000B0380 /* Author.swift in Sources */,
-				7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */,
 				79762857235A787300055EC7 /* PostsViewController.swift in Sources */,
 				7909C65E23522061000B0380 /* Client.swift in Sources */,
 				7976285A235A80F500055EC7 /* PostCollectionViewCell.swift in Sources */,

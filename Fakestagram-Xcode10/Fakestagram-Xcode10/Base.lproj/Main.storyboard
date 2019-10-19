@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="otB-4m-CzE">
             <objects>
                 <viewController id="irY-uQ-7Eh" customClass="PostsViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,16 +48,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2ep-Ke-HAd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cUC-Se-v93"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home1" id="cUC-Se-v93"/>
                     <connections>
-                        <outlet property="postCollection" destination="9ae-yy-aMd" id="Ubw-dc-YpL"/>
+                        <outlet property="postsCollection" destination="9ae-yy-aMd" id="YOM-tA-Aks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibJ-0q-6EC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="947.28260869565224"/>
         </scene>
-        <!--Item-->
+        <!--Create-->
         <scene sceneID="d9s-vz-mYd">
             <objects>
                 <viewController id="CbX-HI-Xoz" sceneMemberID="viewController">
@@ -67,13 +67,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="657-c0-Z8r"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Szv-ze-lr4"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="plus1" id="Szv-ze-lr4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGp-ms-v6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928" y="951"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="9t1-sT-Bfd">
             <objects>
                 <viewController id="ect-6f-0xf" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vHX-OD-kS5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gQp-i7-2H0"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile1" id="gQp-i7-2H0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiL-le-unW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,6 +95,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WsH-js-szv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="09Q-2P-GM3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -109,4 +110,9 @@
             <point key="canvasLocation" x="1117.3913043478262" y="192.39130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home1" width="38" height="38"/>
+        <image name="plus1" width="38" height="38"/>
+        <image name="profile1" width="38" height="38"/>
+    </resources>
 </document>

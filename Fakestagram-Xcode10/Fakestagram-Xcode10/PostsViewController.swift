@@ -12,24 +12,24 @@ class PostsViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     var posts: [Post]? {
         didSet{
-            self.postCollection.reloadData()
+            self.postsCollection.reloadData()
         }
     }
     
     let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts")
     
-    @IBOutlet weak var postCollection: UICollectionView!
+    @IBOutlet weak var postsCollection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        postCollection.delegate = self
-        postCollection.dataSource = self
+        postsCollection.delegate = self
+        postsCollection.dataSource = self
         let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
-        postCollection.register(nib, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
-        client.show { [unowned self]data in
+//        let nib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
+        postsCollection.register(nib, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        client.show { [unowned self] data in
             self.posts = data
-            print(data)
         }
         // Do any additional setup after loading the view.
     }
@@ -52,17 +52,16 @@ class PostsViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCollectionViewCell
-        guard let posts = posts else {return cell}
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as! PostCollectionViewCell
+        guard let posts = self.posts else { return cell }
         cell.post = posts[indexPath.row]
-//        cell.backgroundColor = .yellow
         return cell
         
     }
     
     // MARK: - Flow Layout Delegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width , height: self.view.frame.height * 0.6)
+        return CGSize(width: self.view.frame.width , height: 650)
     }
     
 

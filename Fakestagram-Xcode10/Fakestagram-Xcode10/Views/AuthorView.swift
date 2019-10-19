@@ -8,16 +8,22 @@
 
 import UIKit
 
+@IBDesignable
 class AuthorView: UIView{
-    let avatar: UIImageView = {
+    var author: Author? {
+        didSet { updateContent() }
+    }
+    
+    private let avatar: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "")
-        iv.contentMode = .scaleAspectFill
+        iv.image = UIImage(named: "profile-2")
+//        iv.backgroundColor =
+        iv.contentMode = .scaleToFill
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
     
-    let nameLbl: UILabel = {
+    private let nameLbl: UILabel = {
         let lbl = UILabel()
         lbl.text = "Lorem ipsum"
         lbl.font = UIFont.systemFont(ofSize: 32)
@@ -44,9 +50,9 @@ class AuthorView: UIView{
 //        avatar.topAnchor.constraint(equalTo: self.topAnchor, constant: 3).isActive = true
 //        Para evitar estar haciendo isActive por cada constraint utilizamos NSLayoutConstraint.activate
         NSLayoutConstraint.activate([
-            avatar.topAnchor.constraint(equalTo: self.topAnchor, constant: 3),
-            avatar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 3),
-            avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            avatar.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            avatar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
             avatar.widthAnchor.constraint(equalToConstant: 90)
 //            avatar.heightAnchor.constraint(equalToConstant: self.frame.height-6)
         ])
@@ -54,8 +60,13 @@ class AuthorView: UIView{
         addSubview(nameLbl)
         NSLayoutConstraint.activate([
             nameLbl.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 5),
-            nameLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 3),
+            nameLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             nameLbl.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
+    }
+    
+    func updateContent() {
+        guard let uauthor = author else { return }
+        nameLbl.text = uauthor.name
     }
 }
