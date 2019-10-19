@@ -30,6 +30,8 @@
 		E0C93EA82352455C00FD330C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C93EA72352455C00FD330C /* Comment.swift */; };
 		E0C93EAA2352457200FD330C /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C93EA92352457200FD330C /* Like.swift */; };
 		E0E2545F235A9F3A00C55767 /* UIDevice+models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */; };
+		E0E25463235B675100C55767 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E25462235B675100C55767 /* CameraViewController.swift */; };
+		E0E25465235B6C0500C55767 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E25464235B6C0500C55767 /* UIImage+Base64.swift */; };
 		E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9642348018200DA9D1A /* Credentials.swift */; };
 		E0E8B9682348036D00DA9D1A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9672348036D00DA9D1A /* Client.swift */; };
 		E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B96923481D5A00DA9D1A /* StatusCode.swift */; };
@@ -80,6 +82,8 @@
 		E0C93EA72352455C00FD330C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E0C93EA92352457200FD330C /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+models.swift"; sourceTree = "<group>"; };
+		E0E25462235B675100C55767 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		E0E25464235B6C0500C55767 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		E0E8B9642348018200DA9D1A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		E0E8B9672348036D00DA9D1A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		E0E8B96923481D5A00DA9D1A /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
@@ -155,11 +159,13 @@
 				E084FADF233A8734009AC50D /* Main.storyboard */,
 				E038FCEC233FC78600E28571 /* PostViewController.swift */,
 				E0A9ED50235A782F00A0527E /* PostsViewController.swift */,
+				E0E25462235B675100C55767 /* CameraViewController.swift */,
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
 				E0E8B9642348018200DA9D1A /* Credentials.swift */,
 				E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */,
+				E0E25464235B6C0500C55767 /* UIImage+Base64.swift */,
 			);
 			path = fakestagram;
 			sourceTree = "<group>";
@@ -414,10 +420,12 @@
 				E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */,
 				E0E8B974234918FF00DA9D1A /* Account.swift in Sources */,
 				E0C93EA123523B7C00FD330C /* ShowPostViewController.swift in Sources */,
+				E0E25463235B675100C55767 /* CameraViewController.swift in Sources */,
 				E038FCED233FC78600E28571 /* PostViewController.swift in Sources */,
 				E0C93EA82352455C00FD330C /* Comment.swift in Sources */,
 				E0C93EAA2352457200FD330C /* Like.swift in Sources */,
 				E0C93E9D23515CEE00FD330C /* CodableSerializer.swift in Sources */,
+				E0E25465235B6C0500C55767 /* UIImage+Base64.swift in Sources */,
 				E0E8B9762349197100DA9D1A /* Post.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
 				E0E8B96E2348203B00DA9D1A /* RequestBuilder.swift in Sources */,

@@ -58,11 +58,27 @@
         <!--Create-->
         <scene sceneID="U2O-nr-Rge">
             <objects>
-                <viewController id="Tt7-wh-Hav" sceneMemberID="viewController">
+                <viewController id="Tt7-wh-Hav" customClass="CameraViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6d-4y-Gvs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlR-JL-JPB">
+                                <rect key="frame" x="195" y="437" width="24" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="camera.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="zaO-oz-ngr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wlR-JL-JPB" firstAttribute="centerX" secondItem="O6d-4y-Gvs" secondAttribute="centerX" id="VRF-W8-oUW"/>
+                            <constraint firstItem="wlR-JL-JPB" firstAttribute="centerY" secondItem="O6d-4y-Gvs" secondAttribute="centerY" id="qSD-4t-HQS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
@@ -110,6 +126,7 @@
     </scenes>
     <resources>
         <image name="approval" width="30" height="30"/>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>
