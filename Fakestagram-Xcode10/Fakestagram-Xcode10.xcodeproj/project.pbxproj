@@ -13,6 +13,9 @@
 		7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB7233F1B1C0004C30D /* Assets.xcassets */; };
 		7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */; };
 		7701BEC6233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */; };
+		7706D144235B583000290A16 /* UIDevice+models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706D143235B583000290A16 /* UIDevice+models.swift */; };
+		7706D146235B679900290A16 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706D145235B679900290A16 /* CameraViewController.swift */; };
+		7706D148235B6DCA00290A16 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706D147235B6DCA00290A16 /* UIImage+Base64.swift */; };
 		7909C65A23521FEC000B0380 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65923521FEC000B0380 /* Credentials.swift */; };
 		7909C65C23522002000B0380 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65B23522002000B0380 /* PostViewController.swift */; };
 		7909C65E23522061000B0380 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C65D23522061000B0380 /* Client.swift */; };
@@ -62,6 +65,9 @@
 		7701BEC1233F1B1C0004C30D /* Fakestagram-Xcode10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fakestagram-Xcode10Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7701BEC5233F1B1C0004C30D /* Fakestagram_Xcode10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakestagram_Xcode10Tests.swift; sourceTree = "<group>"; };
 		7701BEC7233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7706D143235B583000290A16 /* UIDevice+models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+models.swift"; sourceTree = "<group>"; };
+		7706D145235B679900290A16 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7706D147235B6DCA00290A16 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		7909C65923521FEC000B0380 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		7909C65B23522002000B0380 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		7909C65D23522061000B0380 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -158,13 +164,16 @@
 				7909C65723521FD3000B0380 /* DataSource */,
 				7909C65623521FCD000B0380 /* Model */,
 				7701BEB0233F1B1B0004C30D /* AppDelegate.swift */,
-				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
-				79762856235A787300055EC7 /* PostsViewController.swift */,
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
-				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
+				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
+				7706D145235B679900290A16 /* CameraViewController.swift */,
+				7706D147235B6DCA00290A16 /* UIImage+Base64.swift */,
+				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
+				79762856235A787300055EC7 /* PostsViewController.swift */,
 				7909C65923521FEC000B0380 /* Credentials.swift */,
 				7909C65B23522002000B0380 /* PostViewController.swift */,
+				7706D143235B583000290A16 /* UIDevice+models.swift */,
 			);
 			path = "Fakestagram-Xcode10";
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7909C66223522091000B0380 /* RequestBuilder.swift in Sources */,
+				7706D146235B679900290A16 /* CameraViewController.swift in Sources */,
 				7909C66C2352218A000B0380 /* Account.swift in Sources */,
 				7909C66023522082000B0380 /* HttpResponse.swift in Sources */,
 				7909C67E23524566000B0380 /* Comment.swift in Sources */,
@@ -420,10 +430,12 @@
 				79762857235A787300055EC7 /* PostsViewController.swift in Sources */,
 				7909C65E23522061000B0380 /* Client.swift in Sources */,
 				7976285A235A80F500055EC7 /* PostCollectionViewCell.swift in Sources */,
+				7706D144235B583000290A16 /* UIDevice+models.swift in Sources */,
 				7909C6682352214C000B0380 /* CodableSerializer.swift in Sources */,
 				7909C686235246FE000B0380 /* AuthorView.swift in Sources */,
 				7909C66A2352216E000B0380 /* RestClient.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
+				7706D148235B6DCA00290A16 /* UIImage+Base64.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

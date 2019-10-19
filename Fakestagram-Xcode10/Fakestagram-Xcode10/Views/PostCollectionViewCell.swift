@@ -40,7 +40,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         guard let post = self.post else { return }
         self.authorView.author = post.author
         self.titleLabel?.text = post.title
-        self.likeCounter.text = "\(post.likesCount) likes"
+        self.likeCounter.text = post.likesCountText()
         post.load { [unowned self] img in
             self.imageView.image = img
         }

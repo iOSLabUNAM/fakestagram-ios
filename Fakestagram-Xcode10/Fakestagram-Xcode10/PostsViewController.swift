@@ -17,6 +17,7 @@ class PostsViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts")
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var postsCollection: UICollectionView!
     
@@ -28,13 +29,19 @@ class PostsViewController: UIViewController, UICollectionViewDataSource, UIColle
         let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
 //        let nib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
         postsCollection.register(nib, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
-        client.show { [unowned self] data in
-            self.posts = data
-        }
+        refreshControl.addTarget(self, action: #selector(reloadData), for: UIControl.Event.valueChanged)
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func reloadData(){
+        client.show { [unowned self] data in
+            self.posts = data
+            sleep(1)
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
