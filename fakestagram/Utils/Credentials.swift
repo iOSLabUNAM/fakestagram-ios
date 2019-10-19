@@ -14,11 +14,23 @@ enum Credentials {
     func get() -> String? {
         switch self {
         case .apiToken:
-            return "f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e"
+            return UserDefaults.standard.string(forKey: "apiToken")
         }
     }
 
     func set(value: String) -> Bool {
+        switch self {
+        case .apiToken:
+            UserDefaults.standard.set(value, forKey: "apiToken")
+        }
+        return true
+    }
+
+    func destroy() -> Bool {
+        switch self {
+        case .apiToken:
+            UserDefaults.standard.setNilValueForKey("apiToken")
+        }
         return true
     }
 }
