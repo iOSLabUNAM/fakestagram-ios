@@ -34,6 +34,9 @@
 		7909C68023524576000B0380 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C67F23524576000B0380 /* Like.swift */; };
 		7909C6822352458A000B0380 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C6812352458A000B0380 /* Author.swift */; };
 		7909C686235246FE000B0380 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909C685235246FE000B0380 /* AuthorView.swift */; };
+		79762857235A787300055EC7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79762856235A787300055EC7 /* PostsViewController.swift */; };
+		7976285A235A80F500055EC7 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79762858235A80F500055EC7 /* PostCollectionViewCell.swift */; };
+		7976285B235A80F500055EC7 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79762859235A80F500055EC7 /* PostCollectionViewCell.xib */; };
 		F2AD903247DD33845EA3C7FB /* Pods_Fakestagram_Xcode10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F32B394EBB804D9C3E14052 /* Pods_Fakestagram_Xcode10.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		7909C67F23524576000B0380 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		7909C6812352458A000B0380 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		7909C685235246FE000B0380 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
+		79762856235A787300055EC7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		79762858235A80F500055EC7 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCollectionViewCell.swift; path = "Fakestagram-Xcode10/Views/PostCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		79762859235A80F500055EC7 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PostCollectionViewCell.xib; path = "Fakestagram-Xcode10/Views/PostCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		7F32B394EBB804D9C3E14052 /* Pods_Fakestagram_Xcode10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram_Xcode10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC485714B1528A06F25D0EB3 /* Pods_Fakestagram_Xcode10Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram_Xcode10Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCED9AC22B8D6D07928F1A67 /* Pods-Fakestagram-Xcode10Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		7701BEAF233F1B1B0004C30D /* Fakestagram-Xcode10 */ = {
 			isa = PBXGroup;
 			children = (
+				79762856235A787300055EC7 /* PostsViewController.swift */,
 				7909C67823523B52000B0380 /* Views */,
 				7909C65823521FD9000B0380 /* Network */,
 				7909C65723521FD3000B0380 /* DataSource */,
@@ -223,6 +230,8 @@
 			children = (
 				7909C67923523BE3000B0380 /* PostXIBViewController.swift */,
 				7909C67A23523BE3000B0380 /* PostXIBViewController.xib */,
+				79762858235A80F500055EC7 /* PostCollectionViewCell.swift */,
+				79762859235A80F500055EC7 /* PostCollectionViewCell.xib */,
 				7909C685235246FE000B0380 /* AuthorView.swift */,
 			);
 			path = Views;
@@ -316,6 +325,7 @@
 				7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */,
 				7909C67C23523BE3000B0380 /* PostXIBViewController.xib in Resources */,
 				7701BEB6233F1B1B0004C30D /* Main.storyboard in Resources */,
+				7976285B235A80F500055EC7 /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +426,9 @@
 				7909C68023524576000B0380 /* Like.swift in Sources */,
 				7909C6822352458A000B0380 /* Author.swift in Sources */,
 				7701BED1233F1B540004C30D /* PostsTableViewController.swift in Sources */,
+				79762857235A787300055EC7 /* PostsViewController.swift in Sources */,
 				7909C65E23522061000B0380 /* Client.swift in Sources */,
+				7976285A235A80F500055EC7 /* PostCollectionViewCell.swift in Sources */,
 				7909C6682352214C000B0380 /* CodableSerializer.swift in Sources */,
 				7909C686235246FE000B0380 /* AuthorView.swift in Sources */,
 				7909C66A2352216E000B0380 /* RestClient.swift in Sources */,

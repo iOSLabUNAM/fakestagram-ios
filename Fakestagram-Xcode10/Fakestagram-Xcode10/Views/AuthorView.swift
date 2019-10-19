@@ -20,6 +20,8 @@ class AuthorView: UIView{
     let nameLbl: UILabel = {
         let lbl = UILabel()
         lbl.text = "Lorem ipsum"
+        lbl.font = UIFont.systemFont(ofSize: 32)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
@@ -45,6 +47,7 @@ class AuthorView: UIView{
             avatar.topAnchor.constraint(equalTo: self.topAnchor, constant: 3),
             avatar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 3),
             avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            avatar.widthAnchor.constraint(equalToConstant: 90)
 //            avatar.heightAnchor.constraint(equalToConstant: self.frame.height-6)
         ])
         
