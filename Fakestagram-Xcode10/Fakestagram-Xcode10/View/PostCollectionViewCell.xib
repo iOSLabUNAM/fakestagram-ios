@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="Fakestagram_Xcode10" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFj-cv-fx6" customClass="AuthorView" customModule="Fakestagram_Xcode10" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="88" id="Esw-6s-uQf"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAT-v3-k0x">
+                        <rect key="frame" x="0.0" y="90" width="415" height="418"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yAT-v3-k0x" secondAttribute="height" multiplier="415:418" id="ByR-UT-9eI"/>
+                            <constraint firstAttribute="height" constant="418" id="nBh-Ey-sJf"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="O5A-fF-0Jk">
+                        <rect key="frame" x="5" y="516" width="212" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eij-n4-OCN">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="onTapLike:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Nkj-bH-c9n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNt-cK-41W" userLabel="Comment">
+                                <rect key="frame" x="53" y="0.0" width="67" height="30"/>
+                                <state key="normal" title="Comment"/>
+                                <connections>
+                                    <action selector="onTapCreateComment:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xu8-0M-h8I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="948-EE-LFh">
+                                <rect key="frame" x="143" y="0.0" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuu-97-2gk">
+                        <rect key="frame" x="5" y="551" width="405" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kca-On-ZFf">
+                        <rect key="frame" x="325.5" y="597.5" width="67" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Comment"/>
+                        <connections>
+                            <action selector="onTapShowComment:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wgr-QD-Ee5"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="uFj-cv-fx6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0qo-ej-16h"/>
+                <constraint firstItem="Cuu-97-2gk" firstAttribute="top" secondItem="O5A-fF-0Jk" secondAttribute="bottom" constant="5" id="1m1-7P-QaO"/>
+                <constraint firstItem="Cuu-97-2gk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="1s0-yM-QHc"/>
+                <constraint firstItem="yAT-v3-k0x" firstAttribute="top" secondItem="uFj-cv-fx6" secondAttribute="bottom" constant="2" id="474-gK-ray"/>
+                <constraint firstItem="Cuu-97-2gk" firstAttribute="top" secondItem="O5A-fF-0Jk" secondAttribute="bottom" constant="5" id="Ggm-gG-VM5"/>
+                <constraint firstAttribute="trailing" secondItem="Cuu-97-2gk" secondAttribute="trailing" constant="5" id="Sed-xn-vTv"/>
+                <constraint firstItem="yAT-v3-k0x" firstAttribute="top" secondItem="uFj-cv-fx6" secondAttribute="bottom" constant="2" id="TKd-00-T01"/>
+                <constraint firstItem="yAT-v3-k0x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vlz-mr-lBm"/>
+                <constraint firstAttribute="trailing" secondItem="yAT-v3-k0x" secondAttribute="trailing" id="WZ2-Fk-DuO"/>
+                <constraint firstItem="O5A-fF-0Jk" firstAttribute="top" secondItem="yAT-v3-k0x" secondAttribute="bottom" constant="8" id="gOz-aN-VKg"/>
+                <constraint firstItem="uFj-cv-fx6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gqW-IZ-vRk"/>
+                <constraint firstAttribute="trailing" secondItem="uFj-cv-fx6" secondAttribute="trailing" id="lSP-jA-YYT"/>
+                <constraint firstItem="O5A-fF-0Jk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="q08-Xr-7xV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="458" height="546"/>
+            <connections>
+                <outlet property="authorView" destination="uFj-cv-fx6" id="Pzv-zc-dCh"/>
+                <outlet property="commentBtn" destination="SNt-cK-41W" id="zkO-aw-024"/>
+                <outlet property="imageView" destination="yAT-v3-k0x" id="bGE-iO-v9p"/>
+                <outlet property="likeBttn" destination="eij-n4-OCN" id="cM3-ZH-bie"/>
+                <outlet property="likeCounter" destination="948-EE-LFh" id="Buc-Gs-hiE"/>
+                <outlet property="titleLabel" destination="Cuu-97-2gk" id="pz3-Rn-TL3"/>
+            </connections>
+            <point key="canvasLocation" x="433.33333333333337" y="283.59375"/>
+        </collectionViewCell>
+    </objects>
+</document>
