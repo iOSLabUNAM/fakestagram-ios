@@ -11,6 +11,6 @@ import Foundation
 struct Account: Codable {
     let id: String?
     let name: String
-    let deviceNumber: String
-    let deviceModel: String
+    let deviceNumber: String?
+    let deviceModel: String?
 }

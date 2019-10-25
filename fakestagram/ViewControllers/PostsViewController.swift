@@ -15,6 +15,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts")
+    let refreshControl = UIRefreshControl()
 
     @IBOutlet weak var postsCollection: UICollectionView!
     override func viewDidLoad() {
@@ -23,6 +24,10 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         postsCollection.dataSource = self
         let nib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
         postsCollection.register(nib, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        postsCollection.addSubview(refreshControl)
+
+        refreshControl.addTarget(self, action: #selector(self.reloadData), for: UIControl.Event.valueChanged)
+
         client.show { [unowned self] data in
             self.posts = data
         }
@@ -39,6 +44,14 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Pass the selected object to the new view controller.
     }
     */
+
+    @objc
+    func reloadData() {
+        client.show { [unowned self] data in
+            self.posts = data
+            self.refreshControl.endRefreshing()
+        }
+    }
 
     // MARK: - Collection View Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
