@@ -16,7 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadOrCreateAccount()
+        //print(UIDevice.modelName)
+        //print(UIDevice.identifier)
         return true
+    }
+
+    func loadOrCreateAccount(){
+        if Credentials.apiToken != nil { return }
+        let account = Account(id: nil, name: "Maximo Decimo", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
+        client.create(account) { account in
+            guard let account = account, let idx = account.id else { return }
+            _ = Credentials.apiToken.set(value: idx)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

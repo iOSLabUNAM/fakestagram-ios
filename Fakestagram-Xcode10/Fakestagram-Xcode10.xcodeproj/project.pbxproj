@@ -126,11 +126,21 @@
 		6C112496235B7C3200D8FAA4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6C5F5799234827B200488E96 /* PostViewController.swift */,
 				6C307326235A78350063C3C5 /* PostsViewController.swift */,
+				6C5F5799234827B200488E96 /* PostViewController.swift */,
 				6CB97271235B6B5D0052BDB2 /* CameraViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C112497235B7CE000D8FAA4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6C5F57942348203100488E96 /* Credentials.swift */,
+				6C30732C235AA3730063C3C5 /* UIDevice+models.swift */,
+				6C112494235B742900D8FAA4 /* UIImage+Base64.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6C1DC80A2351653E001E8065 /* Models */ = {
@@ -214,14 +224,12 @@
 				6C1DC80A2351653E001E8065 /* Models */,
 				6C1DC80F2351658F001E8065 /* Network */,
 				6C5F57962348206000488E96 /* DataSource */,
+				6C112497235B7CE000D8FAA4 /* Utils */,
 				7701BEB0233F1B1B0004C30D /* AppDelegate.swift */,
 				7701BEB4233F1B1B0004C30D /* Main.storyboard */,
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
-				6C5F57942348203100488E96 /* Credentials.swift */,
-				6C112494235B742900D8FAA4 /* UIImage+Base64.swift */,
-				6C30732C235AA3730063C3C5 /* UIDevice+models.swift */,
 			);
 			path = "Fakestagram-Xcode10";
 			sourceTree = "<group>";
