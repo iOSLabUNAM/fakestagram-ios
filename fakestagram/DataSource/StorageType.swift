@@ -40,7 +40,7 @@ enum StorageType {
         var isDir: ObjCBool = false
         if FileManager.default.fileExists(atPath: path, isDirectory: &isDir) {
             if isDir.boolValue { return }
-            try? FileManager.default.removeItem(at: url)
+            clear()
         }
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: nil)
     }

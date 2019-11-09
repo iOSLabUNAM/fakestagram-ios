@@ -28,15 +28,25 @@ enum ImageStore {
 
     func read(_ filename: String) -> UIImage? {
         if let img = CacheImage.shared.read(key: filename) {
+            print(" - Reading from memory")
             return img
         }
+        print(" - Reading from disk")
         guard let data = container.read(filename) else { return nil }
-        return UIImage(data: data)
+        let image = UIImage(data: data)
+
+        print(" * Writting into memory")
+        CacheImage.shared.write(key: filename, value: image)
+        return image
     }
 
     func write(_ filename: String, image: UIImage) -> Bool {
-        CacheImage.shared.write(key: filename, value: image)
         guard let data = image.jpegData(compressionQuality: 0.9) else { return false }
+
+        print(" - Writting into memory")
+        CacheImage.shared.write(key: filename, value: image)
+
+        print(" - Writting into disk")
         return container.write(filename, data: data)
     }
 }
