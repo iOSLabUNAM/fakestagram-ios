@@ -15,6 +15,9 @@
 		E045844D23765677006574FA /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045844C23765677006574FA /* DataContainer.swift */; };
 		E045844F23765B0F006574FA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045844E23765B0F006574FA /* ImageStore.swift */; };
 		E045845123766203006574FA /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045845023766203006574FA /* CacheImage.swift */; };
+		E0458454237721F5006574FA /* CheckSum.m in Sources */ = {isa = PBXBuildFile; fileRef = E0458453237721F5006574FA /* CheckSum.m */; };
+		E0458457237725B9006574FA /* IndexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0458456237725B9006574FA /* IndexService.swift */; };
+		E0458459237727D8006574FA /* CheckSumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0458458237727D8006574FA /* CheckSumTest.swift */; };
 		E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FAD9233A8734009AC50D /* AppDelegate.swift */; };
 		E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084FADB233A8734009AC50D /* SceneDelegate.swift */; };
 		E084FAE1233A8734009AC50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084FADF233A8734009AC50D /* Main.storyboard */; };
@@ -68,6 +71,11 @@
 		E045844C23765677006574FA /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		E045844E23765B0F006574FA /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		E045845023766203006574FA /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		E0458452237721F5006574FA /* fakestagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fakestagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0458453237721F5006574FA /* CheckSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSum.m; sourceTree = "<group>"; };
+		E045845523772360006574FA /* CheckSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSum.h; sourceTree = "<group>"; };
+		E0458456237725B9006574FA /* IndexService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexService.swift; sourceTree = "<group>"; };
+		E0458458237727D8006574FA /* CheckSumTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSumTest.swift; sourceTree = "<group>"; };
 		E084FAD6233A8734009AC50D /* fakestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fakestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084FAD9233A8734009AC50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E084FADB233A8734009AC50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E045844823762E10006574FA /* CreatePostService.swift */,
+				E0458456237725B9006574FA /* IndexService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -181,6 +190,9 @@
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
+				E0458453237721F5006574FA /* CheckSum.m */,
+				E045845523772360006574FA /* CheckSum.h */,
+				E0458452237721F5006574FA /* fakestagram-Bridging-Header.h */,
 			);
 			path = fakestagram;
 			sourceTree = "<group>";
@@ -191,6 +203,7 @@
 				E0C93E952351472A00FD330C /* casettes */,
 				E084FAF0233A8735009AC50D /* RequestBuilderTests.swift */,
 				E0C93E932351435100FD330C /* RestClientTest.swift */,
+				E0458458237727D8006574FA /* CheckSumTest.swift */,
 				E084FAF2233A8735009AC50D /* Info.plist */,
 			);
 			path = fakestagramTests;
@@ -335,6 +348,7 @@
 				TargetAttributes = {
 					E084FAD5233A8734009AC50D = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 					E084FAEB233A8735009AC50D = {
 						CreatedOnToolsVersion = 11.0;
@@ -462,10 +476,12 @@
 				E0E8B974234918FF00DA9D1A /* Account.swift in Sources */,
 				E0C93EA123523B7C00FD330C /* ShowPostViewController.swift in Sources */,
 				E0E25463235B675100C55767 /* CameraViewController.swift in Sources */,
+				E0458457237725B9006574FA /* IndexService.swift in Sources */,
 				E038FCED233FC78600E28571 /* PostViewController.swift in Sources */,
 				E0C93EA82352455C00FD330C /* Comment.swift in Sources */,
 				E0C93EAA2352457200FD330C /* Like.swift in Sources */,
 				E0C93E9D23515CEE00FD330C /* CodableSerializer.swift in Sources */,
+				E0458454237721F5006574FA /* CheckSum.m in Sources */,
 				E0E25465235B6C0500C55767 /* UIImage+Base64.swift in Sources */,
 				E0E8B9762349197100DA9D1A /* Post.swift in Sources */,
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
@@ -490,6 +506,7 @@
 			files = (
 				E0C93E942351435100FD330C /* RestClientTest.swift in Sources */,
 				E084FAF1233A8735009AC50D /* RequestBuilderTests.swift in Sources */,
+				E0458459237727D8006574FA /* CheckSumTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +596,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -632,6 +650,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -642,6 +661,7 @@
 			baseConfigurationReference = DB68F7FEC717545506064663 /* Pods-fakestagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3XL2U7DQC;
 				INFOPLIST_FILE = fakestagram/Info.plist;
@@ -651,6 +671,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fakestagram/fakestagram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -661,6 +683,7 @@
 			baseConfigurationReference = CCC6C6EA9D17CA169951A745 /* Pods-fakestagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3XL2U7DQC;
 				INFOPLIST_FILE = fakestagram/Info.plist;
@@ -670,6 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "fakestagram/fakestagram-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
