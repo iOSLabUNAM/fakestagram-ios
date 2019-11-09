@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-struct CreatePost: Codable {
-    let title: String
-    let imageData: String?
-}
-
 struct Post: Codable {
     let id: Int?
     let title: String

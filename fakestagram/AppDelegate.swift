@@ -40,5 +40,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             _ = Credentials.apiToken.set(value: idx)
         }
     }
-
 }
