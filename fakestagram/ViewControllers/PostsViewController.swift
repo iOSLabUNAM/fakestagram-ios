@@ -32,6 +32,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         service.call { [unowned self] data in
             self.posts = data
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NotificationKeys.didFinishPostCreation.value, object: nil)
 
         // Do any additional setup after loading the view.
     }

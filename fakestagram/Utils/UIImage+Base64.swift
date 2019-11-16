@@ -17,8 +17,7 @@ extension Data {
 
 extension UIImage {
     func base64() -> String {
-        let data = self.jpegData(compressionQuality: 0.9)!
+        let data = self.jpegData(compressionQuality: 0.85)!
         return data.imageBase64(ext: "jpg")
     }
 }
-

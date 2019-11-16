@@ -121,8 +121,8 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         debugPrint(photo.metadata)
 
-        guard let data = photo.fileDataRepresentation() else { return }
-        service.call(data: data, title: UUID().uuidString) { postId in
+        guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
+        service.call(image: img, title: UUID().uuidString) { postId in
             print("Successful!")
             print(postId ?? -1)
         }

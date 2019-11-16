@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05D8E963168944918FFCC7FF /* Pods_fakestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAA8B9133CEE464C903FDF5 /* Pods_fakestagram.framework */; };
 		D3D164DC7444072103DE027D /* Pods_fakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E669E31C92D68155914FC99D /* Pods_fakestagramTests.framework */; };
+		E023A5542380859200B13B7D /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023A5532380859200B13B7D /* NotificationKeys.swift */; };
 		E038FCED233FC78600E28571 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038FCEC233FC78600E28571 /* PostViewController.swift */; };
 		E045844923762E10006574FA /* CreatePostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045844823762E10006574FA /* CreatePostService.swift */; };
 		E045844B237652DD006574FA /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045844A237652DD006574FA /* StorageType.swift */; };
@@ -66,6 +67,7 @@
 		66342726A6BCEEEF6289B1AA /* Pods-fakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.debug.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC6C6EA9D17CA169951A745 /* Pods-fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.release.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.release.xcconfig"; sourceTree = "<group>"; };
 		DB68F7FEC717545506064663 /* Pods-fakestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.debug.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.debug.xcconfig"; sourceTree = "<group>"; };
+		E023A5532380859200B13B7D /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		E038FCEC233FC78600E28571 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E045844823762E10006574FA /* CreatePostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostService.swift; sourceTree = "<group>"; };
 		E045844A237652DD006574FA /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				E0E8B9642348018200DA9D1A /* Credentials.swift */,
 				E0E2545E235A9F3A00C55767 /* UIDevice+models.swift */,
 				E0E25464235B6C0500C55767 /* UIImage+Base64.swift */,
+				E023A5532380859200B13B7D /* NotificationKeys.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				E0E8B96A23481D5A00DA9D1A /* StatusCode.swift in Sources */,
 				E045845123766203006574FA /* CacheImage.swift in Sources */,
 				E045844B237652DD006574FA /* StorageType.swift in Sources */,
+				E023A5542380859200B13B7D /* NotificationKeys.swift in Sources */,
 				E0C185F0237F92C700AD9983 /* PreviewView.swift in Sources */,
 				E0E8B974234918FF00DA9D1A /* Account.swift in Sources */,
 				E0C93EA123523B7C00FD330C /* ShowPostViewController.swift in Sources */,
