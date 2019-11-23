@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController" customModule="fakestagram" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPostViewController" customModule="fakestagram" customModuleProvider="target">
             <connections>
+                <outlet property="buttonPrueba" destination="vPk-UA-714" id="800-Aq-dfb"/>
                 <outlet property="commentBttn" destination="7EP-jx-uUw" id="bhb-0Y-yMT"/>
                 <outlet property="imageView" destination="YV2-tY-nJq" id="jGE-oR-1ot"/>
-                <outlet property="likeBttn" destination="NKo-yq-iiB" id="J0x-wP-Zfo"/>
+                <outlet property="likeBttn" destination="NKo-yq-iiB" id="py1-58-5xB"/>
                 <outlet property="likeCounter" destination="oTH-yn-EKw" id="bZa-x5-sEP"/>
                 <outlet property="titleLabel" destination="urV-FF-Zw5" id="53c-og-Q2P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -75,6 +76,14 @@
                     <state key="normal" title="Comments"/>
                     <connections>
                         <action selector="onTapShowComments:" destination="-1" eventType="touchUpInside" id="zyS-29-XSe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPk-UA-714">
+                    <rect key="frame" x="159" y="677" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="hola" destination="-1" eventType="touchUpInside" id="kWf-41-aGe"/>
                     </connections>
                 </button>
             </subviews>

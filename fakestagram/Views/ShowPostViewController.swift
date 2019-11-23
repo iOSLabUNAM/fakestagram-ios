@@ -14,19 +14,22 @@ class ShowPostViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var likeBttn: UIButton!
     @IBOutlet weak var commentBttn: UIButton!
+    
+    @IBOutlet weak var buttonPrueba: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    @IBAction
-    func onTapLike(_ sender: Any) {
+    
+    @IBAction func hola(){
+        print("hola")
+    }
+    @IBAction func onTapLike(_ sender: Any) {
         print("like")
     }
 
-    @IBAction
-    func onTapCreateComment(_ sender: Any) {
+    @IBAction func onTapCreateComment(_ sender: Any) {
         print("to comment")
     }
 

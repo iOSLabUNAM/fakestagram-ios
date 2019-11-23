@@ -15,6 +15,8 @@ class PostCollectionViewCell: UICollectionViewCell {
             updateView()
         }
     }
+    
+
     @IBOutlet weak var authorView: AuthorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
@@ -38,5 +40,7 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
-
+    @IBAction func Hola(_ sender: Any) {
+        print("Hola")
+    }
 }
