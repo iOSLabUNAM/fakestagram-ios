@@ -34,6 +34,7 @@ class ShowPostViewController: UIViewController {
     func onTapShowComments(_ sender: Any) {
         print("to show comment")
     }
+    
 
     /*
     // MARK: - Navigation
