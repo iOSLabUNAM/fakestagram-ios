@@ -26,15 +26,16 @@ class CreatePostService {
     private let client = RestClient<CreatePost>(client: Client.fakestagram, basePath: "/api/v1/posts/")
     private var currentLocation: CLLocationCoordinate2D?
 
-    func call(image img: UIImage, title: String, success: @escaping (Int?) -> Void) {
+    func call(image: UIImage, title: String, success: @escaping (Int?) -> Void) {
         let newPost = CreatePost(
             id: nil,
             title: title,
-            imageData: img.base64(),
+            imageData: image.base64(),
             latitude: currentLocation?.latitude,
             longitude: currentLocation?.longitude
         )
         client.create(newPost) { post in
+            NotificationCenter.default.post(name: NotificationKeys.didFinishPostCreation.value, object: nil)
             success(post?.id)
         }
     }
