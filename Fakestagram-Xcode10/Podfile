@@ -6,6 +6,7 @@ target 'Fakestagram-Xcode10' do
   use_frameworks!
 
   # Pods for Fakestagram-Xcode10
+  pod 'SAMKeychain'
 
   target 'Fakestagram-Xcode10Tests' do
     inherit! :search_paths

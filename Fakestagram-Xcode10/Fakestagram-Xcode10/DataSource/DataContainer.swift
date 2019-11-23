@@ -13,26 +13,24 @@ import Foundation
 // DataContainer.cache.read("file.png")
 // DataContainer.permanent.write("file.json",data: parsedData)
 // DataContainer.permanent.read("file.png")
+
 enum DataContainer {
     case cache
     case permanent
-
+    
     var baseUrl: URL {
         switch self {
         case .cache:
-            StorageType.cache.ensureExists()
             return StorageType.cache.url
         case .permanent:
-            StorageType.permanent.ensureExists()
             return StorageType.permanent.url
         }
     }
-
+    
     func read(_ filename: String) -> Data? {
-        let url = urlFor(filename: filename)
-        return try? Data(contentsOf: url)
+        return try? Data(contentsOf: urlFor(filename: filename))
     }
-
+    
     func write(_ filename: String, data: Data) -> Bool {
         do {
             try data.write(to: urlFor(filename: filename))
@@ -42,11 +40,12 @@ enum DataContainer {
             return false
         }
     }
-
+    
     func urlFor(filename: String) -> URL {
         var url = baseUrl
         url.appendPathComponent(filename)
         return url
     }
-
+    
 }
+
