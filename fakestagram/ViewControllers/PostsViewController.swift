@@ -14,7 +14,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.postsCollection.reloadData()
         }
     }
-    let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts")
+
+    let service = IndexService()
     let refreshControl = UIRefreshControl()
 
     @IBOutlet weak var postsCollection: UICollectionView!
@@ -28,9 +29,10 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
         refreshControl.addTarget(self, action: #selector(self.reloadData), for: UIControl.Event.valueChanged)
 
-        client.show { [unowned self] data in
+        service.call { [unowned self] data in
             self.posts = data
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NotificationKeys.didFinishPostCreation.value, object: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -47,7 +49,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     @objc
     func reloadData() {
-        client.show { [unowned self] data in
+        service.call { [unowned self] data in
             self.posts = data
             self.refreshControl.endRefreshing()
         }

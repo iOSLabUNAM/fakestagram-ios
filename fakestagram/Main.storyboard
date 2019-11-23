@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,29 +63,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlR-JL-JPB">
-                                <rect key="frame" x="195" y="437" width="24" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="camera.fill" catalog="system">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="zaO-oz-ngr"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Capture"/>
+                                        <connections>
+                                            <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="25" id="9b8-Nw-vWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="20" id="9ni-n1-GFK"/>
+                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="20" id="gFc-M1-ufz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wlR-JL-JPB" firstAttribute="centerX" secondItem="O6d-4y-Gvs" secondAttribute="centerX" id="VRF-W8-oUW"/>
-                            <constraint firstItem="wlR-JL-JPB" firstAttribute="centerY" secondItem="O6d-4y-Gvs" secondAttribute="centerY" id="qSD-4t-HQS"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="0it-cv-PHD"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="Ipp-tq-VSv"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="edS-Iu-DTF"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="uvD-97-5Rp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
+                    <connections>
+                        <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHk-vx-Qau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="814"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tAT-aD-rp5">
@@ -126,7 +140,6 @@
     </scenes>
     <resources>
         <image name="approval" width="30" height="30"/>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>

@@ -51,6 +51,14 @@ class Client {
             let response = HttpResponse(response: response)
             if response.isSuccessful() {
                 success(data)
+            } else {
+                #if DEBUG
+                debugPrint(response.status)
+                if let data = data {
+                    let error = String(data: data, encoding: .utf8)
+                    debugPrint(error)
+                }
+                #endif
             }
         }.resume()
     }

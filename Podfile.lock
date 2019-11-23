@@ -1,0 +1,20 @@
+PODS:
+  - DVR (2.0.0)
+  - SAMKeychain (1.5.3)
+
+DEPENDENCIES:
+  - DVR
+  - SAMKeychain
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DVR
+    - SAMKeychain
+
+SPEC CHECKSUMS:
+  DVR: 062c287b9dc613a84120e44640176e4ef3ecf943
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+
+PODFILE CHECKSUM: bb430d1d54e81dae805d148ccfb6ef5eaa33e1ca
+
+COCOAPODS: 1.5.3
