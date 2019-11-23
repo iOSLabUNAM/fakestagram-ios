@@ -50,6 +50,7 @@
 		E0E8B971234916D100DA9D1A /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B970234916D100DA9D1A /* RestClient.swift */; };
 		E0E8B974234918FF00DA9D1A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B973234918FF00DA9D1A /* Account.swift */; };
 		E0E8B9762349197100DA9D1A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8B9752349197100DA9D1A /* Post.swift */; };
+		FA55F8582389AF3B007B969D /* CreateLikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55F8572389AF3B007B969D /* CreateLikeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		E0E8B973234918FF00DA9D1A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		E0E8B9752349197100DA9D1A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E669E31C92D68155914FC99D /* Pods_fakestagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fakestagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA55F8572389AF3B007B969D /* CreateLikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLikeService.swift; sourceTree = "<group>"; };
 		FFAA8B9133CEE464C903FDF5 /* Pods_fakestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fakestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			children = (
 				E045844823762E10006574FA /* CreatePostService.swift */,
 				E0458456237725B9006574FA /* IndexService.swift */,
+				FA55F8572389AF3B007B969D /* CreateLikeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */,
 				E045844F23765B0F006574FA /* ImageStore.swift in Sources */,
 				E045844D23765677006574FA /* DataContainer.swift in Sources */,
+				FA55F8582389AF3B007B969D /* CreateLikeService.swift in Sources */,
 				E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */,
 				E0E8B971234916D100DA9D1A /* RestClient.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
@@ -689,13 +693,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				DEVELOPMENT_TEAM = LJRMJUKQ84;
 				INFOPLIST_FILE = fakestagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagramyfh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "fakestagram/fakestagram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -711,13 +715,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3XL2U7DQC;
+				DEVELOPMENT_TEAM = LJRMJUKQ84;
 				INFOPLIST_FILE = fakestagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagramhfhfj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "fakestagram/fakestagram-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
