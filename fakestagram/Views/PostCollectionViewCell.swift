@@ -15,6 +15,10 @@ class PostCollectionViewCell: UICollectionViewCell {
             updateView()
         }
     }
+    
+    let service = CreateLikeService()
+
+    
     @IBOutlet weak var authorView: AuthorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
@@ -36,6 +40,20 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.likeCounter.text = post.likesCountText()
         post.load { [unowned self] img in
             self.imageView.image = img
+        }
+    }
+    
+    
+    @IBAction func onTapLike(_ sender: Any) {
+        print("like")
+        
+        
+        print(self.post?.id ?? 319)
+        
+        service.call(id: self.post?.id ?? 359) { postId in
+            print("Successful!")
+            
+            print(postId ?? -1)
         }
     }
 
