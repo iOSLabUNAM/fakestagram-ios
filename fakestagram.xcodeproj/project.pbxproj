@@ -689,13 +689,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = SDQAN62828;
+=======
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+>>>>>>> 65cac177e50b641fb3b5a8f28ce318e487236f41
 				INFOPLIST_FILE = fakestagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlosvelasco.fakestagram;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.3zcurdia.fakestagram;
+>>>>>>> 65cac177e50b641fb3b5a8f28ce318e487236f41
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "fakestagram/fakestagram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -711,7 +719,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = SDQAN62828;
+=======
+				DEVELOPMENT_TEAM = D3XL2U7DQC;
+>>>>>>> 65cac177e50b641fb3b5a8f28ce318e487236f41
 				INFOPLIST_FILE = fakestagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
