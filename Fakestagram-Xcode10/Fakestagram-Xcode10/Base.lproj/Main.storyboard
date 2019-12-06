@@ -99,29 +99,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-wf-6L8">
-                                <rect key="frame" x="0.0" y="569" width="414" height="98"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="onTapCreate:" destination="xnK-xi-e4N" eventType="touchUpInside" id="0XV-Av-eeZ"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T20-ts-Uuo" customClass="PreviewView" customModule="Fakestagram_Xcode10" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="561"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-wf-6L8">
+                                        <rect key="frame" x="0.0" y="589" width="414" height="98"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                        <state key="normal" title="Create"/>
+                                        <connections>
+                                            <action selector="onTapCreate:" destination="xnK-xi-e4N" eventType="touchUpInside" id="0XV-Av-eeZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yFl-wf-6L8" secondAttribute="bottom" id="OvQ-Jc-xBJ"/>
+                                    <constraint firstItem="yFl-wf-6L8" firstAttribute="leading" secondItem="T20-ts-Uuo" secondAttribute="leading" id="bFE-13-gds"/>
+                                    <constraint firstAttribute="trailing" secondItem="yFl-wf-6L8" secondAttribute="trailing" id="nXp-CN-NZB"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yFl-wf-6L8" firstAttribute="top" secondItem="T20-ts-Uuo" secondAttribute="bottom" constant="8" id="43Y-tY-bKU"/>
-                            <constraint firstItem="GpJ-KD-MON" firstAttribute="trailing" secondItem="yFl-wf-6L8" secondAttribute="trailing" id="BUk-Vh-nPf"/>
-                            <constraint firstItem="T20-ts-Uuo" firstAttribute="leading" secondItem="GpJ-KD-MON" secondAttribute="leading" id="HLa-dl-BFu"/>
-                            <constraint firstItem="GpJ-KD-MON" firstAttribute="bottom" secondItem="yFl-wf-6L8" secondAttribute="bottom" constant="20" id="ILg-iM-eHp"/>
-                            <constraint firstItem="yFl-wf-6L8" firstAttribute="leading" secondItem="GpJ-KD-MON" secondAttribute="leading" id="XQq-6c-fXE"/>
-                            <constraint firstItem="T20-ts-Uuo" firstAttribute="trailing" secondItem="GpJ-KD-MON" secondAttribute="trailing" id="emk-Tl-O2K"/>
-                            <constraint firstItem="T20-ts-Uuo" firstAttribute="top" secondItem="GpJ-KD-MON" secondAttribute="top" id="gy0-ZH-egC"/>
-                            <constraint firstItem="yFl-wf-6L8" firstAttribute="centerX" secondItem="zUl-tM-XnE" secondAttribute="centerX" id="ugd-fg-kdE"/>
+                            <constraint firstItem="T20-ts-Uuo" firstAttribute="top" secondItem="GpJ-KD-MON" secondAttribute="top" id="n6l-BG-rmn"/>
+                            <constraint firstItem="T20-ts-Uuo" firstAttribute="bottom" secondItem="GpJ-KD-MON" secondAttribute="bottom" id="nAS-ZK-gam"/>
+                            <constraint firstItem="T20-ts-Uuo" firstAttribute="leading" secondItem="GpJ-KD-MON" secondAttribute="leading" id="nXl-Dk-hd7"/>
+                            <constraint firstItem="T20-ts-Uuo" firstAttribute="trailing" secondItem="GpJ-KD-MON" secondAttribute="trailing" id="xLY-li-sPW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GpJ-KD-MON"/>
                     </view>
