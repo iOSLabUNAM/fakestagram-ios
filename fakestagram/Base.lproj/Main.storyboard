@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posts-->
+        <scene sceneID="lO2-2D-4VX">
+            <objects>
+                <viewController id="meV-Lo-Xew" customClass="PostsViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmM-ol-lDg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUj-0c-2jm">
+                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X3D-S2-gdp">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="wcl-Ns-kXV">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ig9-sF-rsg">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GUj-0c-2jm" firstAttribute="bottom" secondItem="0CG-4P-XO3" secondAttribute="bottom" id="BvP-1z-6Vn"/>
+                            <constraint firstItem="GUj-0c-2jm" firstAttribute="trailing" secondItem="0CG-4P-XO3" secondAttribute="trailing" id="J2R-1u-TW4"/>
+                            <constraint firstItem="GUj-0c-2jm" firstAttribute="top" secondItem="0CG-4P-XO3" secondAttribute="top" constant="40" id="KvH-Ca-mot"/>
+                            <constraint firstItem="GUj-0c-2jm" firstAttribute="leading" secondItem="0CG-4P-XO3" secondAttribute="leading" id="Zh5-sD-YxR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0CG-4P-XO3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Posts" image="approval" id="SFK-Ca-EVC"/>
+                    <connections>
+                        <outlet property="postsCollection" destination="GUj-0c-2jm" id="gbo-Zg-ToX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVi-7j-73s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788.40579710144937" y="813.61607142857144"/>
+        </scene>
+        <!--Create-->
+        <scene sceneID="U2O-nr-Rge">
+            <objects>
+                <viewController id="Tt7-wh-Hav" customClass="CameraViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6d-4y-Gvs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Capture"/>
+                                        <connections>
+                                            <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="25" id="9b8-Nw-vWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="20" id="9ni-n1-GFK"/>
+                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="20" id="gFc-M1-ufz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="0it-cv-PHD"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="Ipp-tq-VSv"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="edS-Iu-DTF"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="uvD-97-5Rp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
+                    <connections>
+                        <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHk-vx-Qau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="tAT-aD-rp5">
+            <objects>
+                <viewController id="ZJW-ti-eoH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQN-yB-oxy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pLB-No-Bxb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="7md-cV-5d0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYl-l8-chu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="814"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cdf-t9-xtw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="If5-ZY-Hbn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mB-Md-8hJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="meV-Lo-Xew" kind="relationship" relationship="viewControllers" id="h5r-ai-b30"/>
+                        <segue destination="Tt7-wh-Hav" kind="relationship" relationship="viewControllers" id="api-1x-Rn2"/>
+                        <segue destination="ZJW-ti-eoH" kind="relationship" relationship="viewControllers" id="dvS-MI-idI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsL-Oo-hgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="approval" width="30" height="30"/>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="plus.rectangle" catalog="system" width="64" height="46"/>
+    </resources>
+</document>

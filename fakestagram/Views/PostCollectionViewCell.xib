@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="fakestagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc1-xe-uQk" customClass="AuthorView" customModule="fakestagram" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="88" id="REs-36-bhv"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.icloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-US-mwI">
+                        <rect key="frame" x="0.0" y="91" width="415" height="414.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="418" id="6ca-lE-7T3"/>
+                            <constraint firstAttribute="width" secondItem="bfs-US-mwI" secondAttribute="height" multiplier="415:418" id="t7h-M8-A9g"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-QV-U8H">
+                        <rect key="frame" x="5" y="516" width="141.5" height="22"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ata-8B-MoQ">
+                                <rect key="frame" x="0.0" y="0.0" width="20.5" height="22"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ma-oEM">
+                                <rect key="frame" x="23.5" y="0.0" width="22.5" height="22"/>
+                                <state key="normal" image="bubble.left" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-ZG-6VV" userLabel="LikesCount">
+                                <rect key="frame" x="49" y="0.0" width="92.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolo quet consectetur adisum" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-zA-9Ik">
+                        <rect key="frame" x="5" y="543" width="405" height="23"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="OPw-zA-9Ik" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Go3-Qn-9MG"/>
+                <constraint firstItem="OPw-zA-9Ik" firstAttribute="top" secondItem="ULx-QV-U8H" secondAttribute="bottom" constant="5" id="MXi-7U-ui7"/>
+                <constraint firstItem="ULx-QV-U8H" firstAttribute="top" secondItem="bfs-US-mwI" secondAttribute="bottom" constant="8" id="Ohw-LJ-kJI"/>
+                <constraint firstAttribute="trailing" secondItem="OPw-zA-9Ik" secondAttribute="trailing" constant="5" id="Q7a-x9-j8F"/>
+                <constraint firstAttribute="trailing" secondItem="fc1-xe-uQk" secondAttribute="trailing" id="W65-wK-6mh"/>
+                <constraint firstItem="bfs-US-mwI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yap-dJ-QTX"/>
+                <constraint firstItem="bfs-US-mwI" firstAttribute="top" secondItem="fc1-xe-uQk" secondAttribute="bottom" constant="2" id="bmP-bw-7Xa"/>
+                <constraint firstItem="fc1-xe-uQk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gZ0-ZM-xgr"/>
+                <constraint firstItem="fc1-xe-uQk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gyC-Fb-0TW"/>
+                <constraint firstAttribute="trailing" secondItem="bfs-US-mwI" secondAttribute="trailing" id="yCG-oV-Uga"/>
+                <constraint firstItem="ULx-QV-U8H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ynO-9x-OEJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="346" height="346"/>
+            <connections>
+                <outlet property="authorView" destination="fc1-xe-uQk" id="iwP-4C-eqh"/>
+                <outlet property="commentBttn" destination="8XJ-Ma-oEM" id="lba-fp-hiW"/>
+                <outlet property="imageView" destination="bfs-US-mwI" id="OXS-jJ-xCG"/>
+                <outlet property="likeBttn" destination="ata-8B-MoQ" id="165-uC-Gpr"/>
+                <outlet property="likeCounter" destination="WUZ-ZG-6VV" id="VMH-v3-2ul"/>
+                <outlet property="titleLabel" destination="OPw-zA-9Ik" id="IiN-Q2-eL4"/>
+            </connections>
+            <point key="canvasLocation" x="351.44927536231887" y="251.78571428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bubble.left" catalog="system" width="64" height="54"/>
+        <image name="exclamationmark.icloud" catalog="system" width="64" height="44"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
