@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="meV-Lo-Xew" customClass="PostsViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmM-ol-lDg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUj-0c-2jm">
-                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X3D-S2-gdp">
                                     <size key="itemSize" width="50" height="50"/>
@@ -60,35 +60,36 @@
             <objects>
                 <viewController id="Tt7-wh-Hav" customClass="CameraViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6d-4y-Gvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
-                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Capture"/>
-                                        <connections>
-                                            <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="25" id="9b8-Nw-vWe"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="20" id="9ni-n1-GFK"/>
-                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="20" id="gFc-M1-ufz"/>
+                                    <constraint firstAttribute="height" constant="500" id="ryG-Gx-pP1"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                <rect key="frame" x="50" y="500" width="314" height="187"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="0it-cv-PHD"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="Ipp-tq-VSv"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="edS-Iu-DTF"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="uvD-97-5Rp"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="50" id="7lU-hX-TxU"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="top" secondItem="dsV-RX-7j3" secondAttribute="bottom" id="9Gv-wH-mqT"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" constant="50" id="TXq-Ay-hQK"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="TYX-Hq-49c"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="h8H-UA-WNm"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" id="lN1-kV-JQS"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="mHG-Bz-gPE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
@@ -99,14 +100,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHk-vx-Qau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="813.58695652173924"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tAT-aD-rp5">
             <objects>
                 <viewController id="ZJW-ti-eoH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQN-yB-oxy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pLB-No-Bxb"/>

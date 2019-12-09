@@ -99,7 +99,7 @@ class CameraViewController: UIViewController {
 
     func setupCaptureSession() {
         session.beginConfiguration()
-        let device = AVCaptureDevice.default(.builtInDualCamera,
+        let device = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                  for: .video, position: .back)!
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: device),
             session.canAddInput(videoDeviceInput) else { return }
@@ -122,10 +122,9 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         debugPrint(photo.metadata)
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-        service.call(image: img, title: UUID().uuidString) { postId in
-            print("Successful!")
-            print(postId ?? -1)
-        }
+        let previewVC = PreviewImageViewController()
+        previewVC.image = img
+        present(previewVC, animated: true)
     }
 }
 

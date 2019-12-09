@@ -1,34 +1,36 @@
 //
-//  PreviewCameraViewController.swift
+//  PreviewImageViewController.swift
 //  fakestagram
 //
-//  Created by Ricardo Hernández González on 25/11/19.
+//  Created by Ricardo Hernández González on 09/12/19.
 //  Copyright © 2019 3zcurdia. All rights reserved.
 //
 
 import UIKit
 
-class PreviewCameraViewController: UIViewController {
+class PreviewImageViewController: UIViewController {
 
-    var cameraVC: CameraViewController!
-//    var dato: String!
-    var imagen: UIImage!
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var textForTitle: UITextField!
+    var image: UIImage!
+    let service = CreatePostService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-//        print("dato: \(dato)")
-        previewImage.image = imagen
-        
+        previewImage.image = image
     }
-    
+
     @IBAction func cancel(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func uploadImage(_ sender: UIButton) {
+    @IBAction func save(_ sender: UIButton) {
+        let text = textForTitle.text!
+        service.call(image: image, title: text) { postId in
+            print("Successful!")
+            print(postId ?? -1)
+        }
     }
     /*
     // MARK: - Navigation
