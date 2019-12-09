@@ -23,7 +23,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var commentBttn: UIButton!
 
     func reset() {
-        self.imageView.image = nil
+        self.imageView.image = UIImage(named: "loading")
         self.likeCounter.text = ""
         self.titleLabel.text = ""
     }
@@ -38,5 +38,18 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
-
+    
+    
+    @IBAction func likeAction(_ sender: UIButton) {
+//        likeBttn.setImage(UIImage(named: "heart_full"), for: .normal) // problems with reusable cells
+        let service = CreateLikeService()
+        service.call(postId: post?.id) { (post) in
+            print("success")
+        }
+        
+    }
+    
+    @IBAction func commentAction(_ sender: UIButton) {
+        print("comment")
+    }
 }

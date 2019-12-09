@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,18 +31,21 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-QV-U8H">
-                        <rect key="frame" x="5" y="516" width="141.5" height="22"/>
+                        <rect key="frame" x="5" y="516" width="174.5" height="38"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ata-8B-MoQ">
-                                <rect key="frame" x="0.0" y="0.0" width="20.5" height="22"/>
-                                <state key="normal" image="heart" catalog="system"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ata-8B-MoQ">
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                <state key="normal" image="heart_border"/>
+                                <connections>
+                                    <action selector="likeAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4nG-ym-ect"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ma-oEM">
-                                <rect key="frame" x="23.5" y="0.0" width="22.5" height="22"/>
-                                <state key="normal" image="bubble.left" catalog="system"/>
+                                <rect key="frame" x="41" y="0.0" width="38" height="38"/>
+                                <state key="normal" image="comments"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-ZG-6VV" userLabel="LikesCount">
-                                <rect key="frame" x="49" y="0.0" width="92.5" height="22"/>
+                                <rect key="frame" x="82" y="0.0" width="92.5" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +53,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolo quet consectetur adisum" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-zA-9Ik">
-                        <rect key="frame" x="5" y="543" width="405" height="23"/>
+                        <rect key="frame" x="5" y="559" width="405" height="23"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -85,8 +88,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bubble.left" catalog="system" width="64" height="54"/>
+        <image name="comments" width="38" height="38"/>
         <image name="exclamationmark.icloud" catalog="system" width="64" height="44"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="heart_border" width="38" height="38"/>
     </resources>
 </document>
