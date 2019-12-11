@@ -64,8 +64,13 @@ class PreviewViewController: UIViewController {
         filtersCollectionView.dataSource = self
         
         filtersCollectionView.register(UINib(nibName: "FiltersCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: FiltersCollectionViewCell.identifier)
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     func  applyProcessing() {
            let inputKeys = currentFilter.inputKeys
            if inputKeys.contains(kCIInputIntensityKey){
