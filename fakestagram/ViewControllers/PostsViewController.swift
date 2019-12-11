@@ -64,6 +64,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as! PostCollectionViewCell
         guard let posts = self.posts else { return cell }
         cell.post = posts[indexPath.row]
+        cell.delegate = self
         return cell
     }
 

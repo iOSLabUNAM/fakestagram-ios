@@ -64,6 +64,7 @@ class PostViewController: UIViewController {
             do {
                 guard let data = data else { print("Empty response"); return }
                 let json = try decoder.decode([Comment].self, from: data)
+                print(json)
                 successful(json)
             } catch let err {
                 print("Unable to parse successfull response: \(err.localizedDescription)")

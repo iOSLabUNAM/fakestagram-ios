@@ -29,6 +29,27 @@ class RestClient<T: Codable> {
             CodableSerializer(data: data).async(result: success)
         }
     }
+    
+    func createLike(id: Int? = nil, _ data: T, success: @escaping (T?) -> Void) {
+           var path = basePath
+           if let uid = id {
+               path += "/\(uid)/like"
+           }//
+          let payload = try? encoder.encode(data)
+          client.post(path: path, body: payload) { data in
+              CodableSerializer(data: data).async(result: success)
+          }
+      }
+    func createComment(id: Int? = nil, _ data: T, success: @escaping (T?) -> Void) {
+         var path = basePath
+         if let uid = id {
+             path += "/\(uid)/comments"
+         }//
+        let payload = try? encoder.encode(data)
+        client.post(path: path, body: payload) { data in
+            CodableSerializer(data: data).async(result: success)
+        }
+    }
 
     // eg. GET /posts/
     // eg. GET /posts/:id
