@@ -30,6 +30,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.imageView.image = nil
         self.likeCounter.text = ""
         self.titleLabel.text = ""
+        self.likeBttn.setImage(UIImage.init(systemName: "heart"), for: .normal)
     }
 
     func updateView() {
@@ -39,6 +40,12 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.titleLabel.text = post.title
         self.likeCounter.text = post.likesCountText()
         self.commentCounter.text = post.commentsCountText()
+        print(post.liked)
+        if post.liked == true{  if post.liked {
+            self.likeBttn.setImage(UIImage.init(systemName: "heart.fill"), for: .normal)
+            
+               }
+        }
         post.load { [unowned self] img in
             self.imageView.image = img
         }
@@ -49,24 +56,22 @@ class PostCollectionViewCell: UICollectionViewCell {
 
     
     @IBAction func likeAction(_ sender: UIButton) {
-   
+        
             let service = AddLikeService()
             service.call(postId: post?.id) { (post) in
                 print("success")
+                self.likeBttn.setImage(UIImage.init(systemName: "heart"), for: .normal)
             }
 
         }
 
         @IBAction func commentAction(_ sender: UIButton) {
-            
-            let comentsCollectionView = CollectionViewController(collectionViewLayout: UICollectionViewLayout())
-//            let navigation = UINavigationController(rootViewController: comentsCollectionView)
-//            delegate?.present(navigation, animated: true, completion: nil)
+            guard let id = post?.id else {return}
+            let comentsCollectionView = CommentsViewController()
+            comentsCollectionView.postId = id
             delegate?.navigationController?.pushViewController(comentsCollectionView, animated: true)
             
             
-            
-            print("comment")
         }
 
     

@@ -100,7 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
+                        <outlet property="previewView" destination="dsV-RX-7j3" id="aIk-sD-66Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHk-vx-Qau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

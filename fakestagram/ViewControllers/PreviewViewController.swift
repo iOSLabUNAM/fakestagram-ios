@@ -122,7 +122,9 @@ class PreviewViewController: UIViewController {
         }
         service.call(image: img, title: text) { postId in
             print("Successful!")
+            
             print(postId ?? -1)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

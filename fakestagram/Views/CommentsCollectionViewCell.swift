@@ -10,10 +10,16 @@ import UIKit
 
 class CommentsCollectionViewCell: UICollectionViewCell {
 
-      static let identifier: String = "CommentCell"
+    static let identifier: String = "CommentCell"
+    
+    @IBOutlet weak var commentsTextView: UITextView!
+    var post: Post? 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
-
+    
+   
 }

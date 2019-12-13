@@ -22,6 +22,19 @@ class CameraViewController: UIViewController {
         
         enableBasicLocationServices()
         enableCameraAccess()
+        
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//           
+//                self.imagePicker.sourceType = .camera
+//
+//
+//                addChild(imagePicker)
+//                self.previewView.addSubview(imagePicker.view)
+//                imagePicker.view.frame = self.previewView.bounds
+//                imagePicker.allowsEditing = false
+//                imagePicker.showsCameraControls = false
+//                imagePicker.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            }
     }
 
     override func viewWillAppear(_ animated: Bool) {
