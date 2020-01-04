@@ -11,7 +11,7 @@ import UIKit
 class PostCollectionViewCell: UICollectionViewCell {
     
     let miLikeService = LikeService()
-    weak var delegate: CustomViewDelegate? 
+    let miCommentService = CommentService()
     
     static let identifier: String = "PostCell"
     public var post: Post? {
@@ -57,7 +57,11 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     @IBAction func showComents(_ sender: Any) {
     
-        print("mostrar comentarios")
+        miCommentService.call(userComment: "prueba comentario", idFoto: post?.id){ idFoto in
+            
+            print("prueba comentarios")
+            
+        }
             
     }
 

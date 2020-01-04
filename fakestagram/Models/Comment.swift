@@ -9,6 +9,8 @@
 import Foundation
 
 struct Comment: Codable {
-    let content: String
-    let author: Author?
+    let userComment: String
+    let idFoto: Int?
 }
+    
+
