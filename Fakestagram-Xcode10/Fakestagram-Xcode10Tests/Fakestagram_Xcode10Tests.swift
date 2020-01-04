@@ -1,15 +1,15 @@
 //
-//  fakestagramTests.swift
-//  fakestagramTests
+//  Fakestagram_Xcode10Tests.swift
+//  Fakestagram-Xcode10Tests
 //
-//  Created by LuisE on 9/24/19.
-//  Copyright © 2019 3zcurdia. All rights reserved.
+//  Created by Ricardo Hernández González on 9/27/19.
+//  Copyright © 2019 unam. All rights reserved.
 //
 
 import XCTest
-@testable import fakestagram
+@testable import Fakestagram_Xcode10
 
-class fakestagramTests: XCTestCase {
+class Fakestagram_Xcode10Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
