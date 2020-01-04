@@ -9,6 +9,10 @@
 import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell {
+    
+    let miLikeService = LikeService()
+    weak var delegate: CustomViewDelegate? 
+    
     static let identifier: String = "PostCell"
     public var post: Post? {
         didSet {
@@ -28,6 +32,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.titleLabel.text = ""
     }
 
+    
     func updateView() {
         reset()
         guard let post = self.post else { return }
@@ -38,5 +43,26 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
+    
+    
+    
+    
+    @IBAction func Like(_ sender: Any) {
+        
+        miLikeService.call(idFoto: post?.id){ idFoto in
+            print("Se dio un like")
+        }
+    }
+    
+    
+    @IBAction func showComents(_ sender: Any) {
+    
+        print("mostrar comentarios")
+            
+    }
 
+    
+    
+    
+    
 }

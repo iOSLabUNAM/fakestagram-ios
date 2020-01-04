@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts-->
+        <!--Posts View Controller-->
         <scene sceneID="lO2-2D-4VX">
             <objects>
                 <viewController id="meV-Lo-Xew" customClass="PostsViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0CG-4P-XO3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Posts" image="approval" id="SFK-Ca-EVC"/>
+                    <tabBarItem key="tabBarItem" title="" image="photo" id="SFK-Ca-EVC"/>
                     <connections>
                         <outlet property="postsCollection" destination="GUj-0c-2jm" id="gbo-Zg-ToX"/>
                     </connections>
@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="-788.40579710144937" y="813.61607142857144"/>
         </scene>
-        <!--Create-->
+        <!--Camera View Controller-->
         <scene sceneID="U2O-nr-Rge">
             <objects>
                 <viewController id="Tt7-wh-Hav" customClass="CameraViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,10 +66,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
-                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Capture"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                        <rect key="frame" x="20" y="684" width="374" height="60"/>
+                                        <state key="normal" image="shot"/>
                                         <connections>
                                             <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
                                         </connections>
@@ -92,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
+                    <tabBarItem key="tabBarItem" title="" image="cam" id="uax-Fe-b0Y"/>
                     <connections>
                         <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
                     </connections>
@@ -101,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
         </scene>
-        <!--Profile-->
+        <!--View Controller-->
         <scene sceneID="tAT-aD-rp5">
             <objects>
                 <viewController id="ZJW-ti-eoH" sceneMemberID="viewController">
@@ -111,7 +110,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pLB-No-Bxb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="7md-cV-5d0"/>
+                    <tabBarItem key="tabBarItem" title="" image="user" id="7md-cV-5d0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYl-l8-chu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +124,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mB-Md-8hJ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.23921568627450979" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="meV-Lo-Xew" kind="relationship" relationship="viewControllers" id="h5r-ai-b30"/>
@@ -139,8 +138,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="approval" width="30" height="30"/>
-        <image name="person.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.rectangle" catalog="system" width="64" height="46"/>
+        <image name="cam" width="32" height="32"/>
+        <image name="photo" width="32" height="32"/>
+        <image name="shot" width="60" height="60"/>
+        <image name="user" width="32" height="32"/>
     </resources>
 </document>

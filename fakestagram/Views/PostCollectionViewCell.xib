@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,10 +36,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ata-8B-MoQ">
                                 <rect key="frame" x="0.0" y="0.0" width="20.5" height="22"/>
                                 <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="Like:" destination="gTV-IL-0wX" eventType="touchUpInside" id="N3O-3b-F1E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ma-oEM">
                                 <rect key="frame" x="23.5" y="0.0" width="22.5" height="22"/>
                                 <state key="normal" image="bubble.left" catalog="system"/>
+                                <connections>
+                                    <action selector="showComents:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TIJ-NV-wGN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-ZG-6VV" userLabel="LikesCount">
                                 <rect key="frame" x="49" y="0.0" width="92.5" height="22"/>
@@ -75,7 +81,7 @@
             <size key="customSize" width="346" height="346"/>
             <connections>
                 <outlet property="authorView" destination="fc1-xe-uQk" id="iwP-4C-eqh"/>
-                <outlet property="commentBttn" destination="8XJ-Ma-oEM" id="lba-fp-hiW"/>
+                <outlet property="commentBttn" destination="8XJ-Ma-oEM" id="hUr-o1-0pN"/>
                 <outlet property="imageView" destination="bfs-US-mwI" id="OXS-jJ-xCG"/>
                 <outlet property="likeBttn" destination="ata-8B-MoQ" id="165-uC-Gpr"/>
                 <outlet property="likeCounter" destination="WUZ-ZG-6VV" id="VMH-v3-2ul"/>

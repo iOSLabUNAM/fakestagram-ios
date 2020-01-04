@@ -21,6 +21,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var postsCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         postsCollection.delegate = self
         postsCollection.dataSource = self
         let nib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
