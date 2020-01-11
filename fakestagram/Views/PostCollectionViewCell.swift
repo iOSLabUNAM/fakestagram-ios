@@ -38,5 +38,18 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
-
+    
+    @IBAction func tapLike(_ sender: UIButton) {
+        
+        let service = LikeService()
+        guard let post = self.post else { return }
+        
+        service.getLikes(postID: post.id){
+            postId in
+            print("Successful!")
+            print(postId ?? -1)
+        }
+    }
+    
+    
 }
