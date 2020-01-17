@@ -50,11 +50,11 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.authorView.author = post.author
         self.titleLabel.text = post.title
         self.likeCounter.text = post.likesCountText()
-    
+        
         post.load { [unowned self] img in
             self.imageView.image = img
         }
-        
+                
         self.writeComment.isEnabled = false
         self.writeComment.isHidden = true
         self.postCommentBttn.isEnabled = false
@@ -65,10 +65,16 @@ class PostCollectionViewCell: UICollectionViewCell {
         
     }
     
+    
+    
     @IBAction func tapLike(_ sender: UIButton) {
+        
+        //likeBttn.backgroundColor = UIColor.purple
+        //likeBttn.imageView?.tintColor = .systemPink
         let service = CreateLikeService()
         guard let post = self.post else { return }
         service.call(postID: post.id) { postId in
+        //self.likeBttn.imageView?.tintColor = .systemPink
         print("NewLike")
         print(postId ?? -1)
         }
