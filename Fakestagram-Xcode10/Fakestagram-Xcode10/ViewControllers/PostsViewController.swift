@@ -60,11 +60,35 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as! PostCollectionViewCell
         guard let posts = self.posts else { return cell }
         cell.post = posts[indexPath.row]
+        cell.delegate = self
         return cell
     }
 
     // MARK: - Flow Layout Delegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 650)
+    }
+}
+
+extension PostsViewController: PostCollectionCellDelegate {
+    func didTapLike(onPost post: Post, withinCell cell: PostCollectionViewCell) {
+        guard let postId = post.id else { return }
+        let postIdString = "\(postId)"
+        let likeService = LikeService(withPostID: postIdString)
+        likeService.call(success: { (data) in
+            guard (data as? LikeServiceResponse) != nil else { return }
+            likeService.call(success: { (updatedData) in
+                guard let likes = updatedData as? [LikeServiceResponse] else { return }
+                cell.updatePost(withLikes: likes.count)
+            }, withAction: .getLikes)
+        }, withAction: .create)
+    }
+    
+    func didComment(onPost post: Post, withinCell cell: PostCollectionViewCell) {
+        
+    }
+    
+    func didTapShowComment(onPost post: Post, withinCell cell: PostCollectionViewCell) {
+        navigationController?.pushViewController(CommentViewController.get(), animated: true)
     }
 }

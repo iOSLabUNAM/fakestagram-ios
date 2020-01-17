@@ -33,8 +33,14 @@
 		6C5656552358DB9D00460C1E /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5656542358DB9D00460C1E /* Author.swift */; };
 		6C5656572358DBAB00460C1E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5656562358DBAB00460C1E /* Comment.swift */; };
 		6C5656592358DBB800460C1E /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5656582358DBB800460C1E /* Like.swift */; };
+		6C57E1A823A9936A00AB050C /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57E1A723A9936A00AB050C /* CommentViewController.swift */; };
+		6C57E1AA23A9986F00AB050C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C57E1A923A9986F00AB050C /* CommentTableViewCell.xib */; };
+		6C57E1AC23A9989100AB050C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C57E1AB23A9989100AB050C /* CommentTableViewCell.swift */; };
 		6C5F57952348203100488E96 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F57942348203100488E96 /* Credentials.swift */; };
-		6C5F579A234827B200488E96 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5F5799234827B200488E96 /* PostViewController.swift */; };
+		6C6C3ABD23A600BB00D044AA /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C3ABC23A600BA00D044AA /* PostViewController.swift */; };
+		6C6C3AC123A7FF3500D044AA /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C3AC023A7FF3500D044AA /* LikeService.swift */; };
+		6C6C3AC323A8001200D044AA /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C3AC223A8001200D044AA /* CommentService.swift */; };
+		6C6C3AC523A8406800D044AA /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C3AC423A8406800D044AA /* ShutterButton.swift */; };
 		6C89EB1923772E6500CC903B /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1823772E6500CC903B /* CacheImage.swift */; };
 		6C89EB1B23772E8200CC903B /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1A23772E8200CC903B /* DataContainer.swift */; };
 		6C89EB1D23772EB700CC903B /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1C23772EB700CC903B /* ImageStore.swift */; };
@@ -91,8 +97,14 @@
 		6C5656542358DB9D00460C1E /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		6C5656562358DBAB00460C1E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		6C5656582358DBB800460C1E /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		6C57E1A723A9936A00AB050C /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		6C57E1A923A9986F00AB050C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		6C57E1AB23A9989100AB050C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		6C5F57942348203100488E96 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		6C5F5799234827B200488E96 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		6C6C3ABC23A600BA00D044AA /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		6C6C3AC023A7FF3500D044AA /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		6C6C3AC223A8001200D044AA /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		6C6C3AC423A8406800D044AA /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
 		6C89EB1823772E6500CC903B /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		6C89EB1A23772E8200CC903B /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		6C89EB1C23772EB700CC903B /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
@@ -147,8 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				6C307326235A78350063C3C5 /* PostsViewController.swift */,
-				6C5F5799234827B200488E96 /* PostViewController.swift */,
+				6C6C3ABC23A600BA00D044AA /* PostViewController.swift */,
 				6CB97271235B6B5D0052BDB2 /* CameraViewController.swift */,
+				6C57E1A723A9936A00AB050C /* CommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +218,9 @@
 				6C1DC82A23523BB9001E8065 /* ShowPostViewController.swift */,
 				6C1DC82B23523BB9001E8065 /* ShowPostViewController.xib */,
 				6C1DC82E23524732001E8065 /* AuthorView.swift */,
+				6C6C3AC423A8406800D044AA /* ShutterButton.swift */,
+				6C57E1A923A9986F00AB050C /* CommentTableViewCell.xib */,
+				6C57E1AB23A9989100AB050C /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +243,8 @@
 			children = (
 				6CD0F05B23771FD000D5874B /* CreatePostService.swift */,
 				6C1151B023899CF40047F423 /* IndexService.swift */,
+				6C6C3AC223A8001200D044AA /* CommentService.swift */,
+				6C6C3AC023A7FF3500D044AA /* LikeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -382,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C1DC82D23523BB9001E8065 /* ShowPostViewController.xib in Resources */,
+				6C57E1AA23A9986F00AB050C /* CommentTableViewCell.xib in Resources */,
 				7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */,
 				7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */,
 				7701BEB6233F1B1B0004C30D /* Main.storyboard in Resources */,
@@ -496,6 +515,7 @@
 				6C5656592358DBB800460C1E /* Like.swift in Sources */,
 				6C1DC80E2351656A001E8065 /* Post.swift in Sources */,
 				6C1151B323899F090047F423 /* PreviewView.swift in Sources */,
+				6C6C3AC123A7FF3500D044AA /* LikeService.swift in Sources */,
 				6C89EB1923772E6500CC903B /* CacheImage.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
 				6C1DC81723516603001E8065 /* RequestBuilder.swift in Sources */,
@@ -504,16 +524,20 @@
 				6C5656552358DB9D00460C1E /* Author.swift in Sources */,
 				6C1151B52389A2530047F423 /* NotificationKeys.swift in Sources */,
 				6C1DC82F23524732001E8065 /* AuthorView.swift in Sources */,
+				6C6C3AC323A8001200D044AA /* CommentService.swift in Sources */,
 				6C1151B82389A2940047F423 /* CheckSum.m in Sources */,
 				6C307327235A78350063C3C5 /* PostsViewController.swift in Sources */,
+				6C57E1A823A9936A00AB050C /* CommentViewController.swift in Sources */,
 				6C5656572358DBAB00460C1E /* Comment.swift in Sources */,
 				6C89EB1F23772EEC00CC903B /* StorageType.swift in Sources */,
+				6C6C3AC523A8406800D044AA /* ShutterButton.swift in Sources */,
 				6C30732A235A83A40063C3C5 /* PostCollectionViewCell.swift in Sources */,
 				6C89EB1D23772EB700CC903B /* ImageStore.swift in Sources */,
+				6C6C3ABD23A600BB00D044AA /* PostViewController.swift in Sources */,
 				6C1DC815235165E8001E8065 /* HttpResponse.swift in Sources */,
 				6C1DC811235165A8001E8065 /* Client.swift in Sources */,
 				6C1DC81B23516649001E8065 /* RestClient.swift in Sources */,
-				6C5F579A234827B200488E96 /* PostViewController.swift in Sources */,
+				6C57E1AC23A9989100AB050C /* CommentTableViewCell.swift in Sources */,
 				6C112495235B742900D8FAA4 /* UIImage+Base64.swift in Sources */,
 				6CD0F05C23771FD000D5874B /* CreatePostService.swift in Sources */,
 			);

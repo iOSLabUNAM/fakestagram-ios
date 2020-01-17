@@ -11,3 +11,10 @@ import Foundation
 struct Like: Codable {
     let author: Author
 }
+
+struct LikeServiceResponse: Codable {
+    var id: Int?
+    var author: Author?
+    var createdAt: String?
+    var updatedAt: String?
+}

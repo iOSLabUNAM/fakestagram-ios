@@ -55,8 +55,8 @@ class Client {
                 #if DEBUG
                 debugPrint(response.status)
                 if let data = data {
-                    let error = String(data: data, encoding: .utf8)
-                    debugPrint(error)
+                    guard let error = String(data: data, encoding: .utf8) else { return }
+                    debugPrint(error) 
                 }
                 #endif
             }

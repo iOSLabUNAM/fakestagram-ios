@@ -17,17 +17,17 @@ class AuthorView: UIView {
     private let avatar: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "person")
-        iv.contentMode = .scaleAspectFill
-        iv.layer.cornerRadius = 41
+        iv.contentMode = .scaleAspectFit
+        iv.backgroundColor = .lightGray
+        iv.layer.cornerRadius = 20
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
     private let nameLbl: UILabel = {
         let lbl = UILabel()
-        lbl.text = "Lorem ipsum"
         lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        lbl.textColor =  .black
+        lbl.textColor =  .darkGray
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -49,16 +49,16 @@ class AuthorView: UIView {
     private func setupConstraints() {
         addSubview(avatar)
         NSLayoutConstraint.activate([
-            avatar.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            avatar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-            avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            avatar.widthAnchor.constraint(equalToConstant: 90)
+            avatar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            avatar.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -7),
+            avatar.widthAnchor.constraint(equalToConstant: 40),
+            avatar.heightAnchor.constraint(equalToConstant: 40)
             ])
         addSubview(nameLbl)
         NSLayoutConstraint.activate([
-            nameLbl.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 5),
+            nameLbl.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 10),
             nameLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-            nameLbl.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            nameLbl.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
             ])
     }
 
