@@ -12,8 +12,11 @@ import CoreImage
 
 class PhotoEditingViewController : UIViewController {
 
-    var imgview: UIImageView!
+    @IBOutlet weak var imgview: UIImageView!
+    
+  //  var imgview: UIImageView!
     private var originalImage : UIImage?
+    
     
     struct Filtro {
         let nombreDeFiltro : String
