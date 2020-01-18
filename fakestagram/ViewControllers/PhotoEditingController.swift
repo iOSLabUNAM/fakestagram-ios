@@ -14,9 +14,27 @@ class PhotoEditingViewController : UIViewController {
 
     @IBOutlet weak var imgview: UIImageView!
 
-  //  var imgview: UIImageView!
+    public var image_: UIImage!
+
     private var originalImage : UIImage?
 
+    override func viewDidLoad() {
+        
+        print(image_ ?? -1)
+        
+        if let fotoCap = image_{
+            imgview.image = fotoCap
+        }
+        //imgview.image = UIImage(named: "valley");
+       // originalImage = UIImage(named: "valley");
+        originalImage = UIImage(named: "valley");
+    }
+    
+    @IBAction func Dismiss(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     struct Filtro {
         let nombreDeFiltro : String
         var valorFiltro : Any?
@@ -54,9 +72,10 @@ class PhotoEditingViewController : UIViewController {
 
     @IBAction func applySepia(_ sender: Any){
 
+        print(image_ ?? -1)
         guard let image = imgview.image else { return }
 
-        imgview.image = applyFilter(image: image, filterEffect: Filtro(nombreDeFiltro: "CISepiaTone", valorFiltro: 8.0, nombreDeValorDelFiltro: kCIInputIntensityKey))
+        imgview.image = applyFilter(image: image, filterEffect: Filtro(nombreDeFiltro: "CISepiaTone", valorFiltro: 2.85, nombreDeValorDelFiltro: kCIInputIntensityKey))
 
     }
 

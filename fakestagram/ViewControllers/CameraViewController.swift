@@ -28,6 +28,7 @@ class CameraViewController: UIViewController {
     }
 
     let service = CreatePostService()
+    
     @IBAction func onTapCreate(_ sender: Any) {
         print("📸")
         let settings: AVCapturePhotoSettings
@@ -115,10 +116,6 @@ class CameraViewController: UIViewController {
         session.startRunning()
     }
     
-    @IBAction func PhotoEdit(_ sender: UIButton) {
-        
-    }
-
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
@@ -126,14 +123,25 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         debugPrint(photo.metadata)
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-        service.call(image: img, title: UUID().uuidString) { postId in
-            print("Successful!")
-            print(postId ?? -1)
+        
+//         let fotoTomada = PhotoEditingViewController()
+//
+//        present(fotoTomada, animated: true)
+        
+            func prepare(for segue: UIStoryboardSegue, sender: Any?)
+            {
+                if segue.destination is PhotoEditingViewController
+                {
+                    let fotoTomada = segue.destination as? PhotoEditingViewController
+                    fotoTomada?.image_ = img
+                }
+            }
+            
+//        service.call(image: img, title: UUID().uuidString) { postId in
+//            print("Successful!")
+//            print(postId ?? -1)
         }
     }
-    
-    
-}
 
 extension CameraViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

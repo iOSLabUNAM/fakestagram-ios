@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,6 +75,7 @@
                                         <state key="normal" title="Capture"/>
                                         <connections>
                                             <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                            <segue destination="rqR-TO-1RR" kind="presentation" id="2v5-wq-Jpa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aR-mM-Icg">
@@ -83,7 +84,6 @@
                                         <state key="normal" title="Edit"/>
                                         <connections>
                                             <action selector="PhotoEdit:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="PGX-uk-NnV"/>
-                                            <segue destination="rqR-TO-1RR" kind="presentation" id="5Vq-ZP-fs3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -123,41 +123,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-QW-Fae">
-                                <rect key="frame" x="20" y="98" width="374" height="332"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-QW-Fae">
+                                <rect key="frame" x="20" y="96" width="374" height="459"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgc-1T-EYt">
-                                <rect key="frame" x="42" y="455" width="39" height="30"/>
-                                <state key="normal" title="Sepia"/>
-                                <connections>
-                                    <action selector="applySepia:" destination="rqR-TO-1RR" eventType="touchUpInside" id="omg-rJ-HM4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-Wz-9zC">
-                                <rect key="frame" x="109" y="455" width="53" height="30"/>
-                                <state key="normal" title="Vintage"/>
-                                <connections>
-                                    <action selector="applyPhotoTransferEffect:" destination="rqR-TO-1RR" eventType="touchUpInside" id="QS7-W2-e0C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Q4-S9I">
-                                <rect key="frame" x="192" y="455" width="30" height="30"/>
-                                <state key="normal" title="Blur"/>
-                                <connections>
-                                    <action selector="applyBlur:" destination="rqR-TO-1RR" eventType="touchUpInside" id="UoW-w2-0jr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-AR-eXa">
-                                <rect key="frame" x="326" y="455" width="53" height="30"/>
-                                <state key="normal" title="Original"/>
-                                <connections>
-                                    <action selector="clearFilters:" destination="rqR-TO-1RR" eventType="touchUpInside" id="OC4-Qm-AKF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-ae-uje">
                                 <rect key="frame" x="47" y="28" width="158" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="Dismiss:" destination="rqR-TO-1RR" eventType="touchUpInside" id="k6v-Ul-CVr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhH-Xm-aLy">
                                 <rect key="frame" x="213" y="27" width="155" height="61"/>
@@ -167,8 +142,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Post"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgc-1T-EYt">
+                                <rect key="frame" x="39" y="563" width="39" height="30"/>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="applySepia:" destination="rqR-TO-1RR" eventType="touchUpInside" id="omg-rJ-HM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-Wz-9zC">
+                                <rect key="frame" x="106" y="563" width="53" height="30"/>
+                                <state key="normal" title="Vintage"/>
+                                <connections>
+                                    <action selector="applyPhotoTransferEffect:" destination="rqR-TO-1RR" eventType="touchUpInside" id="QS7-W2-e0C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Q4-S9I">
+                                <rect key="frame" x="189" y="563" width="30" height="30"/>
+                                <state key="normal" title="Blur"/>
+                                <connections>
+                                    <action selector="applyBlur:" destination="rqR-TO-1RR" eventType="touchUpInside" id="UoW-w2-0jr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-AR-eXa">
+                                <rect key="frame" x="323" y="563" width="53" height="30"/>
+                                <state key="normal" title="Original"/>
+                                <connections>
+                                    <action selector="clearFilters:" destination="rqR-TO-1RR" eventType="touchUpInside" id="OC4-Qm-AKF"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-dd-lTv">
-                                <rect key="frame" x="258" y="455" width="34" height="30"/>
+                                <rect key="frame" x="255" y="563" width="34" height="30"/>
                                 <state key="normal" title="B&amp;W"/>
                                 <connections>
                                     <action selector="applyPhotoEffectNoir:" destination="rqR-TO-1RR" eventType="touchUpInside" id="Q1r-l0-KTY"/>
