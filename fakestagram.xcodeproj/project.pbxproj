@@ -11,7 +11,6 @@
 		103D72B423C9B88900C66B7D /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D72B323C9B88900C66B7D /* LikeService.swift */; };
 		103D72B623C9BB3200C66B7D /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D72B523C9BB3200C66B7D /* CommentService.swift */; };
 		10612B0223D212F300655D31 /* PhotoEditingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10612B0123D212F300655D31 /* PhotoEditingController.swift */; };
-		1DDF5F0523D27C5C009FAEAC /* PhotoEditingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDF5F0423D27C5C009FAEAC /* PhotoEditingController.xib */; };
 		D3D164DC7444072103DE027D /* Pods_fakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E669E31C92D68155914FC99D /* Pods_fakestagramTests.framework */; };
 		E023A5542380859200B13B7D /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023A5532380859200B13B7D /* NotificationKeys.swift */; };
 		E038FCED233FC78600E28571 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038FCEC233FC78600E28571 /* PostViewController.swift */; };
@@ -70,7 +69,6 @@
 		103D72B323C9B88900C66B7D /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		103D72B523C9BB3200C66B7D /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		10612B0123D212F300655D31 /* PhotoEditingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingController.swift; sourceTree = "<group>"; };
-		1DDF5F0423D27C5C009FAEAC /* PhotoEditingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoEditingController.xib; sourceTree = "<group>"; };
 		5E0AE2BFBF9C8D81E583E1BE /* Pods-fakestagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.release.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		66342726A6BCEEEF6289B1AA /* Pods-fakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.debug.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC6C6EA9D17CA169951A745 /* Pods-fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.release.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,8 +233,6 @@
 		E0C93E9E23523B4700FD330C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10612B0123D212F300655D31 /* PhotoEditingController.swift */,
-				1DDF5F0423D27C5C009FAEAC /* PhotoEditingController.xib */,
 				E0C185EF237F92C700AD9983 /* PreviewView.swift */,
 				E0A9ED52235A7FF300A0527E /* PostCollectionViewCell.swift */,
 				E0A9ED53235A7FF300A0527E /* PostCollectionViewCell.xib */,
@@ -253,6 +249,7 @@
 				E0A9ED50235A782F00A0527E /* PostsViewController.swift */,
 				E038FCEC233FC78600E28571 /* PostViewController.swift */,
 				E0E25462235B675100C55767 /* CameraViewController.swift */,
+				10612B0123D212F300655D31 /* PhotoEditingController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,7 +401,6 @@
 				E084FAE3233A8735009AC50D /* Assets.xcassets in Resources */,
 				E084FAE1233A8734009AC50D /* Main.storyboard in Resources */,
 				E0A9ED55235A7FF300A0527E /* PostCollectionViewCell.xib in Resources */,
-				1DDF5F0523D27C5C009FAEAC /* PhotoEditingController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

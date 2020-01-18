@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -115,20 +115,100 @@
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Editing View Controller-->
         <scene sceneID="T3u-JN-o1z">
             <objects>
-                <viewController id="rqR-TO-1RR" sceneMemberID="viewController">
+                <viewController id="rqR-TO-1RR" customClass="PhotoEditingViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dMu-rl-0mI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-QW-Fae">
+                                <rect key="frame" x="20" y="98" width="374" height="332"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgc-1T-EYt">
+                                <rect key="frame" x="42" y="455" width="39" height="30"/>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="applySepia:" destination="rqR-TO-1RR" eventType="touchUpInside" id="omg-rJ-HM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsi-Wz-9zC">
+                                <rect key="frame" x="109" y="455" width="53" height="30"/>
+                                <state key="normal" title="Vintage"/>
+                                <connections>
+                                    <action selector="applyPhotoTransferEffect:" destination="rqR-TO-1RR" eventType="touchUpInside" id="QS7-W2-e0C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Q4-S9I">
+                                <rect key="frame" x="192" y="455" width="30" height="30"/>
+                                <state key="normal" title="Blur"/>
+                                <connections>
+                                    <action selector="applyBlur:" destination="rqR-TO-1RR" eventType="touchUpInside" id="UoW-w2-0jr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-AR-eXa">
+                                <rect key="frame" x="326" y="455" width="53" height="30"/>
+                                <state key="normal" title="Original"/>
+                                <connections>
+                                    <action selector="clearFilters:" destination="rqR-TO-1RR" eventType="touchUpInside" id="OC4-Qm-AKF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-ae-uje">
+                                <rect key="frame" x="47" y="28" width="158" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhH-Xm-aLy">
+                                <rect key="frame" x="213" y="27" width="155" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="vfi-tD-rGF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Post"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-dd-lTv">
+                                <rect key="frame" x="258" y="455" width="34" height="30"/>
+                                <state key="normal" title="B&amp;W"/>
+                                <connections>
+                                    <action selector="applyPhotoEffectNoir:" destination="rqR-TO-1RR" eventType="touchUpInside" id="Q1r-l0-KTY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aaI-ae-uje" firstAttribute="firstBaseline" secondItem="zhH-Xm-aLy" secondAttribute="firstBaseline" id="0KE-p3-3Mk"/>
+                            <constraint firstItem="V3a-QW-Fae" firstAttribute="top" secondItem="g53-db-1Vy" secondAttribute="top" constant="98" id="2J8-E2-RSh"/>
+                            <constraint firstItem="Kgc-1T-EYt" firstAttribute="top" secondItem="V3a-QW-Fae" secondAttribute="bottom" constant="25" id="67k-dl-NOt"/>
+                            <constraint firstItem="zhH-Xm-aLy" firstAttribute="top" secondItem="g53-db-1Vy" secondAttribute="top" constant="29" id="BWN-HI-myq"/>
+                            <constraint firstItem="aaI-ae-uje" firstAttribute="leading" secondItem="V3a-QW-Fae" secondAttribute="leading" id="DXJ-1g-v2y"/>
+                            <constraint firstItem="jsi-Wz-9zC" firstAttribute="leading" secondItem="Kgc-1T-EYt" secondAttribute="trailing" constant="30" id="JGZ-RI-g17"/>
+                            <constraint firstItem="Kgc-1T-EYt" firstAttribute="leading" secondItem="g53-db-1Vy" secondAttribute="leading" constant="24" id="K9h-1T-VTW"/>
+                            <constraint firstItem="aaI-ae-uje" firstAttribute="baseline" secondItem="zhH-Xm-aLy" secondAttribute="baseline" id="Oan-SG-WUZ"/>
+                            <constraint firstItem="o3f-Q4-S9I" firstAttribute="centerX" secondItem="V3a-QW-Fae" secondAttribute="centerX" id="QAm-LB-ZX6"/>
+                            <constraint firstItem="g53-db-1Vy" firstAttribute="bottom" secondItem="Kgc-1T-EYt" secondAttribute="bottom" constant="323" id="X7K-ek-giC"/>
+                            <constraint firstItem="zhH-Xm-aLy" firstAttribute="leading" secondItem="aaI-ae-uje" secondAttribute="trailing" constant="12" id="XKV-Sc-szn"/>
+                            <constraint firstItem="xF1-dd-lTv" firstAttribute="leading" secondItem="o3f-Q4-S9I" secondAttribute="trailing" constant="49" id="bYL-mE-fee"/>
+                            <constraint firstItem="zhH-Xm-aLy" firstAttribute="trailing" secondItem="V3a-QW-Fae" secondAttribute="trailing" id="c6H-NE-maG"/>
+                            <constraint firstItem="WBk-AR-eXa" firstAttribute="leading" secondItem="xF1-dd-lTv" secondAttribute="trailing" constant="30" id="daR-aJ-34V"/>
+                            <constraint firstItem="V3a-QW-Fae" firstAttribute="top" secondItem="zhH-Xm-aLy" secondAttribute="bottom" constant="8" id="epd-Zd-MYt"/>
+                            <constraint firstItem="WBk-AR-eXa" firstAttribute="baseline" secondItem="jsi-Wz-9zC" secondAttribute="baseline" id="fBn-s8-oJr"/>
+                            <constraint firstItem="aaI-ae-uje" firstAttribute="top" secondItem="zhH-Xm-aLy" secondAttribute="top" id="hoB-3H-rcO"/>
+                            <constraint firstItem="V3a-QW-Fae" firstAttribute="leading" secondItem="dMu-rl-0mI" secondAttribute="leadingMargin" id="iPX-XT-Mvb"/>
+                            <constraint firstItem="jsi-Wz-9zC" firstAttribute="baseline" secondItem="Kgc-1T-EYt" secondAttribute="baseline" id="mBy-k1-fLx"/>
+                            <constraint firstItem="V3a-QW-Fae" firstAttribute="trailing" secondItem="dMu-rl-0mI" secondAttribute="trailingMargin" id="nIA-O4-3Xi"/>
+                            <constraint firstItem="xF1-dd-lTv" firstAttribute="baseline" secondItem="o3f-Q4-S9I" secondAttribute="baseline" id="qps-oj-7JV"/>
+                            <constraint firstItem="WBk-AR-eXa" firstAttribute="baseline" secondItem="xF1-dd-lTv" secondAttribute="baseline" id="scC-BJ-SD1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g53-db-1Vy"/>
                     </view>
+                    <connections>
+                        <outlet property="imgview" destination="V3a-QW-Fae" id="z2G-Og-3uw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzC-Wc-v5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="1495"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="1494.6428571428571"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tAT-aD-rp5">
