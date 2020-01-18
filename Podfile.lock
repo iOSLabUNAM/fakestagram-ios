@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SAMKeychain
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - DVR
     - SAMKeychain
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 02c21c317ba9be4fdecdfff242f3fa20e9b269bd
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.6.1

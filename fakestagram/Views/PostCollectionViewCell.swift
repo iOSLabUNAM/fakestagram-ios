@@ -38,5 +38,16 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
+    
+    @IBAction func tapLikeBtn(sender: UIButton) {
+        debugPrint("Picaste!!!")
+        let service = LikeService()
+        guard let post = self.post else {
+            return
+        }
+        service.call(id: post.id!) { postId in
+            debugPrint(postId ?? -2)
+        }
+    }
 
 }
