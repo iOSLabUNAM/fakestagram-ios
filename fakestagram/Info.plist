@@ -23,7 +23,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>To capture your favorite moments and share with the world</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Geololcalize your moments</string>
+	<string>Geolocalize your moments</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
