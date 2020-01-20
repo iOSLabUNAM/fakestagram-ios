@@ -16,7 +16,7 @@ var postID = ""
 
 class CommentService{
     
-    func call(success: @escaping (Any?) -> Void, withAction action: LikeServiceAction){
+    func call(success: @escaping (Any?) -> Void, withAction action: CommentServiceAction){
         guard !postID.isEmpty else {
             success(nil)
             return

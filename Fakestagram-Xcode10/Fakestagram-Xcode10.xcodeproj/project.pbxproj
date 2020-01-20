@@ -45,6 +45,7 @@
 		6C89EB1B23772E8200CC903B /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1A23772E8200CC903B /* DataContainer.swift */; };
 		6C89EB1D23772EB700CC903B /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1C23772EB700CC903B /* ImageStore.swift */; };
 		6C89EB1F23772EEC00CC903B /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EB1E23772EEC00CC903B /* StorageType.swift */; };
+		6CA7005123D637BB006B49A8 /* PreviewCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7005023D637BB006B49A8 /* PreviewCameraViewController.swift */; };
 		6CB97272235B6B5D0052BDB2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB97271235B6B5D0052BDB2 /* CameraViewController.swift */; };
 		6CD0F05C23771FD000D5874B /* CreatePostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0F05B23771FD000D5874B /* CreatePostService.swift */; };
 		7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEB0233F1B1B0004C30D /* AppDelegate.swift */; };
@@ -109,6 +110,7 @@
 		6C89EB1A23772E8200CC903B /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		6C89EB1C23772EB700CC903B /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		6C89EB1E23772EEC00CC903B /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		6CA7005023D637BB006B49A8 /* PreviewCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCameraViewController.swift; sourceTree = "<group>"; };
 		6CB97271235B6B5D0052BDB2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6CD0F05B23771FD000D5874B /* CreatePostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostService.swift; sourceTree = "<group>"; };
 		7701BEAD233F1B1B0004C30D /* Fakestagram-Xcode10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fakestagram-Xcode10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				6C6C3ABC23A600BA00D044AA /* PostViewController.swift */,
 				6CB97271235B6B5D0052BDB2 /* CameraViewController.swift */,
 				6C57E1A723A9936A00AB050C /* CommentViewController.swift */,
+				6CA7005023D637BB006B49A8 /* PreviewCameraViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				6C1DC81D2351666C001E8065 /* CodableSerializer.swift in Sources */,
 				6C5F57952348203100488E96 /* Credentials.swift in Sources */,
 				6C1DC82C23523BB9001E8065 /* ShowPostViewController.swift in Sources */,
+				6CA7005123D637BB006B49A8 /* PreviewCameraViewController.swift in Sources */,
 				6C1151B123899CF40047F423 /* IndexService.swift in Sources */,
 				6C5656592358DBB800460C1E /* Like.swift in Sources */,
 				6C1DC80E2351656A001E8065 /* Post.swift in Sources */,
