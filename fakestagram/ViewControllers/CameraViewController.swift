@@ -20,6 +20,7 @@ class CameraViewController: UIViewController {
     }
     @IBOutlet weak var MLDescriptionLabel: UILabel!
     
+    let model = MobileNet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,6 +156,26 @@ extension CameraViewController: CLLocationManagerDelegate {
 
 extension CameraViewController {
     typealias Prediction = (String, Double)
+    
+    func predictUsingCoreML(image: UIImage) -> String? {
+      if let pixelBuffer = image.pixelBuffer(width: 224, height: 224),
+         let prediction = try? model.prediction(data: pixelBuffer) {
+         
+        let top5 = top(5, prediction.prob)
+        
+        if let highestPrediction = top5.first {
+            let accuracy = String(format: "%.2f", highestPrediction.1 * 100)
+            let prediction = highestPrediction.0.split(separator: " ")[1]
+            return "I think this is a: \(prediction) --> \(accuracy)%"
+        }
+        else {
+            return nil
+        }
+        
+      }
+        
+        return nil
+    }
     
     func top(_ k: Int, _ prob: [String: Double]) -> [Prediction] {
       precondition(k <= prob.count)
