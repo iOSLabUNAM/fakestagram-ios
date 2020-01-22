@@ -19,7 +19,7 @@ class ShowPostViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction
     func onTapLike(_ sender: Any) {
         print("like")
@@ -29,7 +29,7 @@ class ShowPostViewController: UIViewController {
     func onTapCreateComment(_ sender: Any) {
         print("to comment")
     }
-    
+
     @IBAction
     func onTapShowComments(_ sender: Any) {
         print("to show comment")
