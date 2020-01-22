@@ -12,7 +12,12 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
-    @IBOutlet weak var MLDescriptionBackgroundView: UIView!
+    @IBOutlet weak var MLDescriptionBackgroundView: UIView! {
+        didSet {
+            MLDescriptionLabel.layer.cornerRadius = 4.0
+            MLDescriptionLabel.isHidden = true
+        }
+    }
     @IBOutlet weak var MLDescriptionLabel: UILabel!
     
     
