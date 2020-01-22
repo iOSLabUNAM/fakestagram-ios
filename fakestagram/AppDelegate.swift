@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func loadOrCreateAccount() {
         if Credentials.apiToken.get() != nil { return }
-        let account = Account(id: nil, name: "Juan Camaney", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let account = Account(id: nil, name: "Alejandro Mendoza", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
         let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
         client.create(account) { account in
             guard let account = account, let idx = account.id else { return }
