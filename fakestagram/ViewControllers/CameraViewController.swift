@@ -134,12 +134,17 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
         
-        
-        
-        service.call(image: img, title: UUID().uuidString) { postId in
-            print("Successful!")
-            print(postId ?? -1)
+        if let predictionMessage = predictUsingCoreML(image: img) {
+            sendAlertWithMessage(predictionMessage)
+            service.call(image: img, title: "\(predictionMessage) - \(UUID().uuidString)") { postId in
+                print("Successful!")
+                print(postId ?? -1)
+            }
         }
+        else {
+            sendAlertWithMessage("Something went wrong!")
+        }
+        
     }
 }
 
