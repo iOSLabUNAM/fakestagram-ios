@@ -14,8 +14,8 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var MLDescriptionBackgroundView: UIView! {
         didSet {
-            MLDescriptionLabel.layer.cornerRadius = 4.0
-            MLDescriptionLabel.isHidden = true
+            MLDescriptionBackgroundView.layer.cornerRadius = 4.0
+            MLDescriptionBackgroundView.isHidden = true
         }
     }
     @IBOutlet weak var MLDescriptionLabel: UILabel!
