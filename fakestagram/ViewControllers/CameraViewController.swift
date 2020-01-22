@@ -11,6 +11,11 @@ import CoreLocation
 import AVFoundation
 
 class CameraViewController: UIViewController {
+    
+    @IBOutlet weak var MLDescriptionBackgroundView: UIView!
+    @IBOutlet weak var MLDescriptionLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         enableBasicLocationServices()

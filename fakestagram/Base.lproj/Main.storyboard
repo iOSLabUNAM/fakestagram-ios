@@ -116,6 +116,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
                     <connections>
+                        <outlet property="MLDescriptionBackgroundView" destination="I5Z-yy-O3q" id="OVl-Sv-eF3"/>
+                        <outlet property="MLDescriptionLabel" destination="hzC-Ea-bRr" id="giv-X4-Reh"/>
                         <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
                     </connections>
                 </viewController>
