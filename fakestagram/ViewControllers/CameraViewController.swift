@@ -132,6 +132,9 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         debugPrint(photo.metadata)
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
+        
+        
+        
         service.call(image: img, title: UUID().uuidString) { postId in
             print("Successful!")
             print(postId ?? -1)
@@ -143,5 +146,21 @@ extension CameraViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         service.update(coordinate: location.coordinate)
+    }
+}
+
+
+
+// MARK: Machine Learning Stuff
+
+extension CameraViewController {
+    typealias Prediction = (String, Double)
+    
+    func top(_ k: Int, _ prob: [String: Double]) -> [Prediction] {
+      precondition(k <= prob.count)
+
+      return Array(prob.map { x in (x.key, x.value) }
+                       .sorted(by: { a, b -> Bool in a.1 > b.1 })
+                       .prefix(through: k - 1))
     }
 }
