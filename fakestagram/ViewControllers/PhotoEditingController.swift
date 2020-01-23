@@ -6,35 +6,62 @@
 //  Copyright © 2020 3zcurdia. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreImage
+import CoreGraphics
 
-class PhotoEditingViewController : UIViewController {
 
-    @IBOutlet weak var imgview: UIImageView!
+class PhotoEditingViewController : UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+        
+    @IBOutlet weak var titleTextField: UITextField!
 
-    public var image_: UIImage!
+    var image_: UIImage!
+    var imgview = UIImageView()
 
     private var originalImage : UIImage?
+    
+    let service = CreatePostService()
 
     override func viewDidLoad() {
+                
+        scrollView.delegate = self
+        imgview.frame = CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
+        imgview.image = UIImage(named: "default");
+        imgview.isUserInteractionEnabled = true
+        scrollView.addSubview(imgview)
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PhotoEditingViewController.loadImage(_:)))
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        imgview.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func loadImage(_ sender: UITapGestureRecognizer){
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
         
-        print(image_ ?? -1)
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let fotoCap = image_{
-            imgview.image = fotoCap
+        if let image = info[.editedImage] as? UIImage {
+            imgview.image = image
+            originalImage = image
+        }else if let image = info[.originalImage] as? UIImage {
+            imgview.image = image
+            originalImage = image
         }
-        //imgview.image = UIImage(named: "valley");
-       // originalImage = UIImage(named: "valley");
-        originalImage = UIImage(named: "valley");
+        picker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func Dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
+
     struct Filtro {
         let nombreDeFiltro : String
         var valorFiltro : Any?
@@ -72,7 +99,6 @@ class PhotoEditingViewController : UIViewController {
 
     @IBAction func applySepia(_ sender: Any){
 
-        print(image_ ?? -1)
         guard let image = imgview.image else { return }
 
         imgview.image = applyFilter(image: image, filterEffect: Filtro(nombreDeFiltro: "CISepiaTone", valorFiltro: 2.85, nombreDeValorDelFiltro: kCIInputIntensityKey))
@@ -100,13 +126,32 @@ class PhotoEditingViewController : UIViewController {
         guard let image = imgview.image else { return }
 
         imgview.image = applyFilter(image: image, filterEffect: Filtro(nombreDeFiltro: "CIPhotoEffectNoir", valorFiltro: nil, nombreDeValorDelFiltro: nil))
-
     }
 
     @IBAction func clearFilters(_ sender: Any){
-
         imgview.image = originalImage
-
+    }
+    
+    @IBAction func newPost(_ sender: Any) {
+        
+        var titulo : String?
+        titulo = titleTextField.text
+        let isEmpty = (titleTextField.text ?? "").isEmpty
+        
+        if isEmpty == true {
+            let alert = UIAlertController(title: "Title Missing", message: "Please write an image title", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated:  true, completion: nil)
+            
+        } else {
+            
+            if let img = imgview.image{
+                service.call(image: img, title: titulo!) { postId in
+                print("Successful!")
+                print(postId ?? -1)
+                }
+            }
+        }
     }
     
 }

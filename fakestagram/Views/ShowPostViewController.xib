@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController" customModule="fakestagram" customModuleProvider="target">
             <connections>
-                <outlet property="commentBttn" destination="7EP-jx-uUw" id="bhb-0Y-yMT"/>
                 <outlet property="imageView" destination="YV2-tY-nJq" id="jGE-oR-1ot"/>
                 <outlet property="likeBttn" destination="NKo-yq-iiB" id="J0x-wP-Zfo"/>
                 <outlet property="likeCounter" destination="oTH-yn-EKw" id="bZa-x5-sEP"/>
@@ -52,9 +51,6 @@
                             <rect key="frame" x="26.5" y="0.0" width="22.5" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" image="bubble.left" catalog="system"/>
-                            <connections>
-                                <action selector="onTapCreateComment:" destination="-1" eventType="touchUpInside" id="yKJ-q2-HiM"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4324 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTH-yn-EKw">
                             <rect key="frame" x="55" y="0.0" width="80.5" height="29"/>
