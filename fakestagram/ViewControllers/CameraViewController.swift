@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import AVFoundation
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         enableBasicLocationServices()
@@ -30,29 +30,35 @@ class CameraViewController: UIViewController {
     let service = CreatePostService()
     
     @IBAction func onTapCreate(_ sender: Any) {
-//        print("📸")
-//        let settings: AVCapturePhotoSettings
-//        print(self.photoOutput.availablePhotoCodecTypes)
-//        if self.photoOutput.availablePhotoCodecTypes.contains(.hevc) {
-//            settings = AVCapturePhotoSettings(format:
-//                [AVVideoCodecKey: AVVideoCodecType.hevc])
-//        } else {
-//            settings = AVCapturePhotoSettings()
-//        }
-//        settings.flashMode = .auto
-//        photoOutput.capturePhoto(with: settings, delegate: self)
-//        if let image = UIImage(named: "babyYoda"){
-//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-//        }
+        print("📸")
+        let settings: AVCapturePhotoSettings
+        print(self.photoOutput.availablePhotoCodecTypes)
+        if self.photoOutput.availablePhotoCodecTypes.contains(.hevc) {
+            settings = AVCapturePhotoSettings(format:
+                [AVVideoCodecKey: AVVideoCodecType.hevc])
+        } else {
+            settings = AVCapturePhotoSettings()
+        }
+        settings.flashMode = .auto
+        photoOutput.capturePhoto(with: settings, delegate: self)
+        
     }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+       
+        debugPrint(photo.metadata)
+        guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
+        UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
+        
+        }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//    }
 
     // MARK: - CoreLocation methods
     let locationManager = CLLocationManager()
@@ -116,18 +122,7 @@ class CameraViewController: UIViewController {
 
         session.startRunning()
     }
-    
 }
-
-extension CameraViewController: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-       
-        debugPrint(photo.metadata)
-        //guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-        //UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
-        
-        }
-    }
 
 extension CameraViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
