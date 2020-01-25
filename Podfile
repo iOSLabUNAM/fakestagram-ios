@@ -6,7 +6,7 @@ target 'fakestagram' do
   use_frameworks!
   # Pods for fakestagram
   pod 'SAMKeychain'
-
+  pod 'DVR'
   target 'fakestagramTests' do
     inherit! :search_paths
     pod 'DVR'

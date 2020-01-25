@@ -15,12 +15,12 @@ class PostCollectionViewCell: UICollectionViewCell {
             updateView()
         }
     }
+    
     @IBOutlet weak var authorView: AuthorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var likeBttn: UIButton!
-    @IBOutlet weak var commentBttn: UIButton!
+    @IBOutlet weak var likeBttn: UIButton!    
 
     func reset() {
         self.imageView.image = nil
@@ -34,8 +34,19 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.authorView.author = post.author
         self.titleLabel.text = post.title
         self.likeCounter.text = post.likesCountText()
+        
         post.load { [unowned self] img in
             self.imageView.image = img
+        }
+    }
+    
+    @IBAction func tapLike(_ sender: UIButton) {
+        
+        let service = CreateLikeService()
+        guard let post = self.post else { return }
+        service.call(postID: post.id) { postId in
+        print("NewLike")
+        print(postId ?? -1)
         }
     }
 

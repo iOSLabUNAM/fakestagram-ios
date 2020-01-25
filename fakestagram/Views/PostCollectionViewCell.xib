@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="fakestagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+            <rect key="frame" x="0.0" y="0.0" width="410" height="706"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="415" height="630"/>
+                <rect key="frame" x="0.0" y="0.0" width="410" height="706"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc1-xe-uQk" customClass="AuthorView" customModule="fakestagram" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="88"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="88" id="REs-36-bhv"/>
@@ -35,7 +35,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ata-8B-MoQ">
                                 <rect key="frame" x="0.0" y="0.0" width="20.5" height="22"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="tapLike:" destination="gTV-IL-0wX" eventType="touchUpInside" id="87L-cH-DwR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Ma-oEM">
                                 <rect key="frame" x="23.5" y="0.0" width="22.5" height="22"/>
@@ -50,7 +54,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolo quet consectetur adisum" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-zA-9Ik">
-                        <rect key="frame" x="5" y="543" width="405" height="23"/>
+                        <rect key="frame" x="5" y="543" width="400" height="23"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -72,16 +76,15 @@
                 <constraint firstItem="ULx-QV-U8H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ynO-9x-OEJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="346" height="346"/>
+            <size key="customSize" width="341" height="422"/>
             <connections>
                 <outlet property="authorView" destination="fc1-xe-uQk" id="iwP-4C-eqh"/>
-                <outlet property="commentBttn" destination="8XJ-Ma-oEM" id="lba-fp-hiW"/>
                 <outlet property="imageView" destination="bfs-US-mwI" id="OXS-jJ-xCG"/>
                 <outlet property="likeBttn" destination="ata-8B-MoQ" id="165-uC-Gpr"/>
                 <outlet property="likeCounter" destination="WUZ-ZG-6VV" id="VMH-v3-2ul"/>
                 <outlet property="titleLabel" destination="OPw-zA-9Ik" id="IiN-Q2-eL4"/>
             </connections>
-            <point key="canvasLocation" x="351.44927536231887" y="251.78571428571428"/>
+            <point key="canvasLocation" x="371.01449275362324" y="263.83928571428572"/>
         </collectionViewCell>
     </objects>
     <resources>
