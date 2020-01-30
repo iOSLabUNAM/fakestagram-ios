@@ -45,7 +45,9 @@ class PostViewController: UIViewController {
     }
     */
     func loadComments(successful: @escaping ([Comment]) -> Void) {
+        
         guard let uwrappedPost = post, let postId = uwrappedPost.id else { return }
+    
         let url = URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts/\(postId)/comments")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
@@ -64,6 +66,7 @@ class PostViewController: UIViewController {
             do {
                 guard let data = data else { print("Empty response"); return }
                 let json = try decoder.decode([Comment].self, from: data)
+                print(json)
                 successful(json)
             } catch let err {
                 print("Unable to parse successfull response: \(err.localizedDescription)")

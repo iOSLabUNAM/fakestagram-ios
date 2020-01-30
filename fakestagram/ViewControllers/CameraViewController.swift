@@ -11,10 +11,30 @@ import CoreLocation
 import AVFoundation
 
 class CameraViewController: UIViewController {
+    
+    lazy var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.imagePicker.delegate = self
+        self.imagePicker.allowsEditing = true
+        
         enableBasicLocationServices()
         enableCameraAccess()
+        
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//           
+//                self.imagePicker.sourceType = .camera
+//
+//
+//                addChild(imagePicker)
+//                self.previewView.addSubview(imagePicker.view)
+//                imagePicker.view.frame = self.previewView.bounds
+//                imagePicker.allowsEditing = false
+//                imagePicker.showsCameraControls = false
+//                imagePicker.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +49,7 @@ class CameraViewController: UIViewController {
 
     let service = CreatePostService()
     @IBAction func onTapCreate(_ sender: Any) {
-        print("📸")
+
         let settings: AVCapturePhotoSettings
         print(self.photoOutput.availablePhotoCodecTypes)
         if self.photoOutput.availablePhotoCodecTypes.contains(.hevc) {
@@ -115,17 +135,30 @@ class CameraViewController: UIViewController {
         session.startRunning()
     }
 
+    @IBAction func chooseFromLibrary(_ sender: Any) {
+        
+         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func setImage(image:UIImage){
+        let controller = PreviewViewController(nibName: "PreviewViewController", bundle: Bundle(for: type(of: self)))
+               controller.image = image
+               self.show(controller, sender: nil)
+    }
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         debugPrint(photo.metadata)
-
+        
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-        service.call(image: img, title: UUID().uuidString) { postId in
-            print("Successful!")
-            print(postId ?? -1)
-        }
+   
+        setImage(image: img)
+
     }
 }
 
@@ -134,4 +167,14 @@ extension CameraViewController: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         service.update(coordinate: location.coordinate)
     }
+}
+
+extension CameraViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{    
+ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.editedImage] as? UIImage {
+            dismiss(animated: true, completion: nil)
+            setImage(image: pickedImage)
+        }
+    }
+    
 }
