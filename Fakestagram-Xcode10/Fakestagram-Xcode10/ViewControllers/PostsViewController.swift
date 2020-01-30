@@ -89,6 +89,18 @@ extension PostsViewController: PostCollectionCellDelegate {
     }
     
     func didTapShowComment(onPost post: Post, withinCell cell: PostCollectionViewCell) {
-        navigationController?.pushViewController(CommentViewController.get(), animated: true)
+        guard let postId = post.id else { return }
+        let postIdString = "\(postId)"
+        let service = CommentService()
+        service.getComment(forPost: postIdString) { commentsResponse in
+            guard let comments = commentsResponse as?
+                [CommentServiceResponse] else { return }
+            let controller = CommentViewController.get()
+            controller.postID = postIdString
+            controller.messages = comments
+            DispatchQueue.main.async {
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+        }
     }
 }

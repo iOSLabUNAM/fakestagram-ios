@@ -12,26 +12,33 @@ enum CommentServiceAction {
     case get,create
 }
 
-var postID = ""
-
 class CommentService{
     
-    func call(success: @escaping (Any?) -> Void, withAction action: CommentServiceAction){
+    var postID = ""
+    
+    let encoder: JSONEncoder = {
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        return encoder
+    }()
+    
+    func call(success: @escaping (Any?) -> Void, withAction action: CommentServiceAction, and comment: String = ""){
         guard !postID.isEmpty else {
             success(nil)
             return
         }
         switch action {
         case .create:
-            createComment(forPost: postID, success: success)
+            createComment(forPost: postID, content: comment, success: success)
         default:
             getComment(forPost: postID, success: success)
         }
     }
     
-    func createComment(forPost postId: String, success: @escaping (CommentServiceResponse?) -> Void){
+    func createComment(forPost postID: String, content: String, success: @escaping (CommentServiceResponse?) -> Void){
         let path = "/api/v1/posts/\(postID)/comments"
-        Client.fakestagram.post(path: path, body: nil) {
+        let body = try? encoder.encode(Comment(content: content, author: nil))
+        Client.fakestagram.post(path: path, body: body) {
             guard let response = $0, let responseModel = try? JSONDecoder().decode(CommentServiceResponse.self, from: response) else {
                 success(nil)
                 return
@@ -40,8 +47,8 @@ class CommentService{
         }
     }
     
-    func getComment(forPost postId: String, success: @escaping ([CommentServiceResponse]?) -> Void){
-        let path = "/api/v1/posts/\(postID)/comments"
+    func getComment(forPost postID: String, success: @escaping ([CommentServiceResponse]?) -> Void){
+        let path = "/api/v1/posts/\(postID)/comments" 
         Client.fakestagram.get(path: path) {
             guard let response = $0, let responseModel = try? JSONDecoder().decode([CommentServiceResponse].self, from: response) else { success(nil); return }
             success(responseModel)

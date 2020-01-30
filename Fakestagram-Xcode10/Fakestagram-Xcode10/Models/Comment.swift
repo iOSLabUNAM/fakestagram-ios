@@ -14,11 +14,10 @@ struct Comment: Codable {
 }
 
 struct CommentServiceResponse: Codable{
-    let commentID: Int
+    let id: Int
     let content: String
     let created_at: String
     let updated_at: String
-    let author: String
-    let name: String
+    let author: Author?
 }
 

@@ -15,6 +15,11 @@ class CommentTableViewCell: UITableViewCell {
     @IBOutlet weak var userName : UILabel!
     @IBOutlet weak var userComment : UILabel!
     
+    func update(withMessage message: CommentServiceResponse) {
+        userName.text = message.author?.name
+        userComment.text = message.content
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

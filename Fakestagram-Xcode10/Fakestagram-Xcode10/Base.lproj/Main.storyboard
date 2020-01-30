@@ -141,23 +141,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-g9-83K">
-                                <rect key="frame" x="100" y="677" width="40" height="38.666666666666629"/>
+                                <rect key="frame" x="100" y="646" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="1dW-1b-Bpt"/>
-                                    <constraint firstAttribute="height" constant="40" id="pUu-Hh-WF1"/>
+                                    <constraint firstAttribute="width" constant="70" id="1dW-1b-Bpt"/>
+                                    <constraint firstAttribute="height" constant="70" id="pUu-Hh-WF1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="checkmark.circle.fill" catalog="system"/>
+                                <state key="normal" image="icons8-checked-40"/>
                                 <connections>
                                     <action selector="accept:" destination="gnI-zS-3An" eventType="touchUpInside" id="Bz3-Ay-93W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8w-V9-ezu">
-                                <rect key="frame" x="274" y="677" width="40" height="38.666666666666629"/>
+                                <rect key="frame" x="244" y="646" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="hkh-7M-zzr"/>
-                                    <constraint firstAttribute="height" constant="40" id="wZ5-WB-wFH"/>
+                                    <constraint firstAttribute="width" constant="70" id="hkh-7M-zzr"/>
+                                    <constraint firstAttribute="height" constant="70" id="wZ5-WB-wFH"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="x.circle.fill" catalog="system"/>
+                                <state key="normal" image="icons8-cancel-40"/>
                                 <connections>
                                     <action selector="cancel:" destination="gnI-zS-3An" eventType="touchUpInside" id="M5L-1I-RBU"/>
                                 </connections>
@@ -291,8 +291,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="iconCamera" width="26" height="26"/>
-        <image name="x.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="icons8-cancel-40" width="40" height="40"/>
+        <image name="icons8-checked-40" width="40" height="40"/>
     </resources>
 </document>
