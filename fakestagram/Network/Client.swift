@@ -41,7 +41,7 @@ class Client {
             debugPrint("Invalid request")
             return
         }
-
+        print(req.url)
         session.dataTask(with: req) { (data, response, error) in
             if let error = error {
                 debugPrint(error)

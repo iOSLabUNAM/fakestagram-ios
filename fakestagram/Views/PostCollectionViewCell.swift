@@ -22,6 +22,9 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var likeBttn: UIButton!
     @IBOutlet weak var commentBttn: UIButton!
 
+    let service = CreateLikeService()
+    let service2 = IndexService()
+
     func reset() {
         self.imageView.image = nil
         self.likeCounter.text = ""
@@ -38,5 +41,19 @@ class PostCollectionViewCell: UICollectionViewCell {
             self.imageView.image = img
         }
     }
-
+    @IBAction func likeButton(_ sender: UIButton) {
+        print("like")
+        if let id = post?.id{
+            service.createLike(id: "\(id)") { (like) in
+                print(like)
+            }
+        }
+        
+        /*service2.callLike(id: "\(id)") { [unowned self] data in
+            print(data)
+            
+        }*/
+        
+    }
+    
 }
