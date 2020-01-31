@@ -10,8 +10,13 @@ import Foundation
 
 class IndexService {
     let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/posts")
-
+    let clientLike = RestClient<[Like]>(client: Client.fakestagram, basePath: "/api/v1/posts")
+    
     func call(success: @escaping ([Post]?) -> Void) {
         client.show(success: success)
+    }
+    
+    func callLike(id: String,success: @escaping ([Like]?) -> Void) {
+        //clientLike.show(id: id,success: success)
     }
 }

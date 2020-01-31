@@ -99,7 +99,7 @@ class CameraViewController: UIViewController {
 
     func setupCaptureSession() {
         session.beginConfiguration()
-        let device = AVCaptureDevice.default(.builtInDualCamera,
+        let device = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                  for: .video, position: .back)!
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: device),
             session.canAddInput(videoDeviceInput) else { return }
