@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,19 +67,35 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
-                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
+                                        <rect key="frame" x="45" y="720" width="177" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="r7h-k4-sUo"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Capture"/>
                                         <connections>
                                             <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-xB-Ofm">
+                                        <rect key="frame" x="287" y="730" width="36" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="14X-b9-nOv"/>
+                                            <constraint firstAttribute="width" constant="36" id="uuD-X1-znw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="camera.rotate.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="25" id="9b8-Nw-vWe"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="20" id="9ni-n1-GFK"/>
-                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="20" id="gFc-M1-ufz"/>
+                                    <constraint firstItem="2C8-xB-Ofm" firstAttribute="leading" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="65" id="3G9-17-xBk"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="8" id="B5B-to-fy1"/>
+                                    <constraint firstAttribute="trailing" secondItem="2C8-xB-Ofm" secondAttribute="trailing" constant="91" id="Od7-yS-IGI"/>
+                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="45" id="RFj-L0-Ajj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2C8-xB-Ofm" secondAttribute="bottom" constant="18" id="f6X-qu-5Hq"/>
+                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="centerY" secondItem="2C8-xB-Ofm" secondAttribute="centerY" id="xwO-ZJ-wJ4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -140,6 +156,7 @@
     </scenes>
     <resources>
         <image name="approval" width="30" height="30"/>
+        <image name="camera.rotate.fill" catalog="system" width="64" height="48"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>
