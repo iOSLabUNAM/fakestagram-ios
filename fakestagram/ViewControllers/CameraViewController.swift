@@ -41,16 +41,24 @@ class CameraViewController: UIViewController {
         settings.flashMode = .auto
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    @IBAction func switchCamera(_ sender: UIButton) {
+        guard let currentCameraInput: AVCaptureInput = session.inputs.first else {
+            return
+        }
+        
+        if let input = currentCameraInput as? AVCaptureDeviceInput {
+            if input.device.position == .back {
+                switchToFrontCamera()
+            }
+            
+            if input.device.position == .front {
+                switchToBackCamera()
+            }
+        }
+     }
+      
 
     // MARK: - CoreLocation methods
     let locationManager = CLLocationManager()
@@ -71,6 +79,7 @@ class CameraViewController: UIViewController {
     // MARK: - AVFoundation methods
 
     @IBOutlet weak var previewView: PreviewView!
+    
     func enableCameraAccess() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
             case .authorized:
@@ -94,15 +103,18 @@ class CameraViewController: UIViewController {
         }
     }
 
-    let session = AVCaptureSession()
+    var session = AVCaptureSession()
     let photoOutput = AVCapturePhotoOutput()
+    var videoPreviewLeyer = AVCaptureVideoPreviewLayer()
+    
+    var frontCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
+    var backCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
 
     func setupCaptureSession() {
         session.beginConfiguration()
-        let device = AVCaptureDevice.default(.builtInWideAngleCamera,
-                                                 for: .video, position: .back)!
+        let device = backCamera!
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: device),
-            session.canAddInput(videoDeviceInput) else { return }
+        session.canAddInput(videoDeviceInput) else { return }
         session.addInput(videoDeviceInput)
 
         guard session.canAddOutput(photoOutput) else { return }
@@ -113,6 +125,42 @@ class CameraViewController: UIViewController {
         previewView.session = session
 
         session.startRunning()
+    }
+    
+    func switchToFrontCamera () {
+        if frontCamera?.isConnected == true {
+            session.stopRunning()
+            let captureDevice = frontCamera
+            do {
+                let input = try AVCaptureDeviceInput(device: captureDevice!)
+                session = AVCaptureSession()
+                session.addInput(input)
+                videoPreviewLeyer = AVCaptureVideoPreviewLayer(session: session)
+                videoPreviewLeyer.frame = previewView.layer.bounds
+                previewView.layer.addSublayer(videoPreviewLeyer)
+                session.startRunning()
+            } catch {
+                print("Error")
+            }
+        }
+    }
+    
+    func switchToBackCamera () {
+        if frontCamera?.isConnected == true {
+            session.stopRunning()
+            let captureDevice = backCamera
+            do {
+                let input = try AVCaptureDeviceInput(device: captureDevice!)
+                session = AVCaptureSession()
+                session.addInput(input)
+                videoPreviewLeyer = AVCaptureVideoPreviewLayer(session: session)
+                videoPreviewLeyer.frame = previewView.layer.bounds
+                previewView.layer.addSublayer(videoPreviewLeyer)
+                session.startRunning()
+            } catch {
+                print("Error")
+            }
+        }
     }
 
 }

@@ -63,48 +63,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                <rect key="frame" x="44" y="749" width="177" height="40.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
-                                        <rect key="frame" x="45" y="720" width="177" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="41" id="r7h-k4-sUo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Capture"/>
-                                        <connections>
-                                            <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-xB-Ofm">
-                                        <rect key="frame" x="287" y="730" width="36" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="14X-b9-nOv"/>
-                                            <constraint firstAttribute="width" constant="36" id="uuD-X1-znw"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="camera.rotate.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                        </state>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="2C8-xB-Ofm" firstAttribute="leading" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="65" id="3G9-17-xBk"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="8" id="B5B-to-fy1"/>
-                                    <constraint firstAttribute="trailing" secondItem="2C8-xB-Ofm" secondAttribute="trailing" constant="91" id="Od7-yS-IGI"/>
-                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="45" id="RFj-L0-Ajj"/>
-                                    <constraint firstAttribute="bottom" secondItem="2C8-xB-Ofm" secondAttribute="bottom" constant="18" id="f6X-qu-5Hq"/>
-                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="centerY" secondItem="2C8-xB-Ofm" secondAttribute="centerY" id="xwO-ZJ-wJ4"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-xB-Ofm">
+                                <rect key="frame" x="286" y="758" width="36" height="22.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22.5" id="Pcb-Ld-fhX"/>
+                                    <constraint firstAttribute="width" constant="36" id="x9c-Ec-7gS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera.rotate.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchCamera:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="bzu-2o-7AG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="0it-cv-PHD"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="Ipp-tq-VSv"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="edS-Iu-DTF"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="uvD-97-5Rp"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="centerX" secondItem="O6d-4y-Gvs" secondAttribute="centerX" id="Gls-z8-Wfh"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="trailing" secondItem="2C8-xB-Ofm" secondAttribute="trailing" constant="92" id="Ksw-jP-0hX"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" constant="44" id="Q82-Fg-GfT"/>
+                            <constraint firstItem="2C8-xB-Ofm" firstAttribute="top" secondItem="dsV-RX-7j3" secondAttribute="bottom" constant="22" id="Upp-hU-iw9"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="centerY" secondItem="2C8-xB-Ofm" secondAttribute="centerY" id="dAB-Ux-1s4"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="top" secondItem="dsV-RX-7j3" secondAttribute="bottom" constant="13" id="e01-Tn-Raf"/>
+                            <constraint firstItem="2C8-xB-Ofm" firstAttribute="leading" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="65" id="nz4-gG-WoD"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="r8v-7d-tsR"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="23.5" id="uUz-xA-hX9"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="vKr-2r-RmD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
