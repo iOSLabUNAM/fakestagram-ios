@@ -71,4 +71,10 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 650)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let postDetail = PostDetailController()
+        postDetail.postData = posts![indexPath.item]
+        navigationController?.pushViewController(postDetail, animated: true)
+    }
 }

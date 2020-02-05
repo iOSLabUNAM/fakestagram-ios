@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		05D8E963168944918FFCC7FF /* Pods_fakestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAA8B9133CEE464C903FDF5 /* Pods_fakestagram.framework */; };
+		98A0E6D32389B32B005349A8 /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0E6D22389B32B005349A8 /* PostDetailController.swift */; };
+		98A0E6D52389BC54005349A8 /* CommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0E6D42389BC54005349A8 /* CommentsService.swift */; };
+		98F533E123EB3AF500C4994F /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F533E023EB3AF500C4994F /* CommentTableViewCell.swift */; };
 		D3D164DC7444072103DE027D /* Pods_fakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E669E31C92D68155914FC99D /* Pods_fakestagramTests.framework */; };
 		E023A5542380859200B13B7D /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023A5532380859200B13B7D /* NotificationKeys.swift */; };
 		E038FCED233FC78600E28571 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038FCEC233FC78600E28571 /* PostViewController.swift */; };
@@ -65,6 +68,9 @@
 /* Begin PBXFileReference section */
 		5E0AE2BFBF9C8D81E583E1BE /* Pods-fakestagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.release.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		66342726A6BCEEEF6289B1AA /* Pods-fakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.debug.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98A0E6D22389B32B005349A8 /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
+		98A0E6D42389BC54005349A8 /* CommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsService.swift; sourceTree = "<group>"; };
+		98F533E023EB3AF500C4994F /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		CCC6C6EA9D17CA169951A745 /* Pods-fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.release.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.release.xcconfig"; sourceTree = "<group>"; };
 		DB68F7FEC717545506064663 /* Pods-fakestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.debug.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		E023A5532380859200B13B7D /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			children = (
 				E045844823762E10006574FA /* CreatePostService.swift */,
 				E0458456237725B9006574FA /* IndexService.swift */,
+				98A0E6D42389BC54005349A8 /* CommentsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 				E0C93E9F23523B7C00FD330C /* ShowPostViewController.swift */,
 				E0C93EA023523B7C00FD330C /* ShowPostViewController.xib */,
 				E0C93EA32352452900FD330C /* AuthorView.swift */,
+				98F533E023EB3AF500C4994F /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				E0A9ED50235A782F00A0527E /* PostsViewController.swift */,
 				E038FCEC233FC78600E28571 /* PostViewController.swift */,
 				E0E25462235B675100C55767 /* CameraViewController.swift */,
+				98A0E6D22389B32B005349A8 /* PostDetailController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -514,12 +523,15 @@
 				E0E8B96E2348203B00DA9D1A /* RequestBuilder.swift in Sources */,
 				E0E8B9682348036D00DA9D1A /* Client.swift in Sources */,
 				E0A9ED51235A782F00A0527E /* PostsViewController.swift in Sources */,
+				98A0E6D52389BC54005349A8 /* CommentsService.swift in Sources */,
+				98F533E123EB3AF500C4994F /* CommentTableViewCell.swift in Sources */,
 				E045844923762E10006574FA /* CreatePostService.swift in Sources */,
 				E0C93EA62352454E00FD330C /* Author.swift in Sources */,
 				E0A9ED54235A7FF300A0527E /* PostCollectionViewCell.swift in Sources */,
 				E0E8B96C23481E1700DA9D1A /* HttpResponse.swift in Sources */,
 				E045844F23765B0F006574FA /* ImageStore.swift in Sources */,
 				E045844D23765677006574FA /* DataContainer.swift in Sources */,
+				98A0E6D32389B32B005349A8 /* PostDetailController.swift in Sources */,
 				E0E8B9652348018200DA9D1A /* Credentials.swift in Sources */,
 				E0E8B971234916D100DA9D1A /* RestClient.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
