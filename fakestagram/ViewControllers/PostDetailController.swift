@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PostDetailController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class PostDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     var postData: Post!
     let commentsService = CommentsService()
+    let cellIdentifier = "commentCell"
     
     var comments: [Comment]? {
         didSet {
@@ -22,6 +23,7 @@ class PostDetailController: UIViewController, UICollectionViewDelegate, UICollec
     let postImage: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
         return imgView
     }()
     
@@ -29,7 +31,7 @@ class PostDetailController: UIViewController, UICollectionViewDelegate, UICollec
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = .white
-        titleLabel.font = UIFont(name: "Marker Felt", size: 25)
+        titleLabel.font = UIFont(name: "System Semibold", size: 25)
        return titleLabel
     }()
     
@@ -37,7 +39,7 @@ class PostDetailController: UIViewController, UICollectionViewDelegate, UICollec
         let likesLabel = UILabel()
          likesLabel.translatesAutoresizingMaskIntoConstraints = false
          likesLabel.textColor = .white
-         likesLabel.font = UIFont(name: "Marker Felt", size: 25)
+         likesLabel.font = UIFont(name: "System", size: 25)
         return likesLabel
     }()
     
@@ -58,38 +60,48 @@ class PostDetailController: UIViewController, UICollectionViewDelegate, UICollec
         postImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         postImage.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         postImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
-        postImage.heightAnchor.constraint(equalToConstant: 340).isActive = true
+        postImage.heightAnchor.constraint(equalToConstant: 400).isActive = true
         
-        postTitle.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 15).isActive = true
-        postTitle.leftAnchor.constraint(equalTo: postImage.leftAnchor).isActive = true
-        postTitle.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        postTitle.widthAnchor.constraint(equalToConstant: 340).isActive = true
+        postTitle.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 10).isActive = true
+        postTitle.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        postTitle.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        postTitle.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
         
         likesCounter.topAnchor.constraint(equalTo: postTitle.bottomAnchor).isActive = true
         likesCounter.leftAnchor.constraint(equalTo: postTitle.leftAnchor).isActive = true
-        likesCounter.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        likesCounter.heightAnchor.constraint(equalToConstant: 30).isActive = true
         likesCounter.widthAnchor.constraint(equalToConstant: 250).isActive = true
         
-        commentsTable.topAnchor.constraint(equalTo: likesCounter.bottomAnchor, constant: 20).isActive = true
-        commentsTable.leftAnchor.constraint(equalTo: likesCounter.leftAnchor).isActive = true
+        commentsTable.topAnchor.constraint(equalTo: likesCounter.bottomAnchor, constant: 10).isActive = true
+        commentsTable.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        commentsTable.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        commentsTable.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        commentsTable.register(CommentTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        commentsTable.dataSource = self
+        commentsTable.delegate = self
         
         postTitle.text = postData.title
         likesCounter.text = postData.likesCountText()
-        postData.load { [unowned self] img in
+        postData.load { img in
             self.postImage.image = img
         }
-        commentsService.getComments(postId: postData.id!) { [unowned self] data in
-            self.comments = data
-        }
+        
+        commentsService.getComments(postId: postData.id!) { data in
+                   self.comments = data
+               }
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = commentsTable.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        guard let comments = self.comments else {return cell}
+        cell.textLabel?.text = comments[indexPath.row].content
+        cell.detailTextLabel?.text = comments[indexPath.row].author!.name
+        return cell
     }
 
 }
