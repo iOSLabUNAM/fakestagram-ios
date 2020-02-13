@@ -1,0 +1,57 @@
+{
+  "interactions" : [
+    {
+      "response" : {
+        "status" : 200,
+        "body" : {
+          "location" : "",
+          "likes_count" : 0,
+          "author" : {
+            "id" : "f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e",
+            "name" : "John Carney",
+            "avatar_url" : null
+          },
+          "id" : 228,
+          "image_url" : "https:\/\/fakestagram-api.herokuapp.com\/rails\/active_storage\/blobs\/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZTA9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b668068c1f6252a77beacbd9313d8f4e078a400f\/4ed83e29-b955-4dc6-b5ee-eafd994e9de8",
+          "title" : "Example",
+          "created_at" : "2019-10-04T21:15:42.650Z",
+          "liked" : false,
+          "updated_at" : "2019-10-04T21:15:42.738Z",
+          "comments_count" : 0
+        },
+        "headers" : {
+          "X-Permitted-Cross-Domain-Policies" : "none",
+          "Content-Type" : "application\/json; charset=utf-8",
+          "X-Request-Id" : "c6266b7f-6e74-4fc8-808c-6046b689f67f",
+          "Via" : "1.1 vegur",
+          "Cache-Control" : "max-age=0, private, must-revalidate",
+          "Strict-Transport-Security" : "max-age=31536000; includeSubDomains",
+          "Date" : "Sat, 12 Oct 2019 00:46:20 GMT",
+          "Transfer-Encoding" : "Identity",
+          "X-Xss-Protection" : "1; mode=block",
+          "Referrer-Policy" : "strict-origin-when-cross-origin",
+          "X-Download-Options" : "noopen",
+          "Server" : "Cowboy",
+          "X-Runtime" : "0.063186",
+          "Connection" : "keep-alive",
+          "Etag" : "W\/\"819b2d0fa0647c5c452d27fb77a8d11e\"",
+          "X-Frame-Options" : "SAMEORIGIN",
+          "Vary" : "Origin",
+          "X-Content-Type-Options" : "nosniff"
+        },
+        "url" : "https:\/\/fakestagram-api.herokuapp.com\/api\/v1\/posts\/228"
+      },
+      "request" : {
+        "headers" : {
+          "Accept" : "application\/json",
+          "Content-Type" : "application\/json",
+          "Authorization" : "Bearer f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e"
+        },
+        "method" : "GET",
+        "url" : "https:\/\/fakestagram-api.herokuapp.com\/api\/v1\/posts\/228"
+      },
+      "recorded_at" : 1570841180.898001
+    }
+  ],
+  "name" : "show_post.successful"
+}

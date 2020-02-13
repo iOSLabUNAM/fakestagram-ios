@@ -1,0 +1,16 @@
+//
+//  Account.swift
+//  Fakestagram-Xcode10
+//
+//  Created by Ricardo Hernandez D4 on 10/12/19.
+//  Copyright © 2019 unam. All rights reserved.
+//
+
+import Foundation
+
+struct Account: Codable {
+    let id: String?
+    let name: String
+    let deviceNumber: String
+    let deviceModel: String
+}
