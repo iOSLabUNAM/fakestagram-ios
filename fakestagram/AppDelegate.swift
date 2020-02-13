@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        StorageType.permanent.ensureExists()
+        StorageType.cache.ensureExists()
+        loadOrCreateAccount()
         return true
     }
 
@@ -30,4 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func loadOrCreateAccount() {
+        if Credentials.apiToken.get() != nil { return }
+        let account = Account(id: nil, name: "Alejandro Mendoza", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
+        client.create(account) { account in
+            guard let account = account, let idx = account.id else { return }
+            _ = Credentials.apiToken.set(value: idx)
+        }
+    }
 }
