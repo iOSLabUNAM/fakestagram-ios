@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05D8E963168944918FFCC7FF /* Pods_fakestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAA8B9133CEE464C903FDF5 /* Pods_fakestagram.framework */; };
 		0EA0E04023F4CAE300F3E463 /* CreateLikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0E03F23F4CAE300F3E463 /* CreateLikeService.swift */; };
+		0ECA1F9823F50E180014023C /* CreateLikeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA1F9723F50E180014023C /* CreateLikeServiceTest.swift */; };
 		D3D164DC7444072103DE027D /* Pods_fakestagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E669E31C92D68155914FC99D /* Pods_fakestagramTests.framework */; };
 		E023A5542380859200B13B7D /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023A5532380859200B13B7D /* NotificationKeys.swift */; };
 		E038FCED233FC78600E28571 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038FCEC233FC78600E28571 /* PostViewController.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		0EA0E03F23F4CAE300F3E463 /* CreateLikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLikeService.swift; sourceTree = "<group>"; };
+		0ECA1F9723F50E180014023C /* CreateLikeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLikeServiceTest.swift; sourceTree = "<group>"; };
 		5E0AE2BFBF9C8D81E583E1BE /* Pods-fakestagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.release.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		66342726A6BCEEEF6289B1AA /* Pods-fakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagramTests.debug.xcconfig"; path = "Target Support Files/Pods-fakestagramTests/Pods-fakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC6C6EA9D17CA169951A745 /* Pods-fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fakestagram.release.xcconfig"; path = "Target Support Files/Pods-fakestagram/Pods-fakestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				E0C93E952351472A00FD330C /* casettes */,
 				E084FAF0233A8735009AC50D /* RequestBuilderTests.swift */,
+				0ECA1F9723F50E180014023C /* CreateLikeServiceTest.swift */,
 				E0C93E932351435100FD330C /* RestClientTest.swift */,
 				E0458458237727D8006574FA /* CheckSumTest.swift */,
 				E084FAF2233A8735009AC50D /* Info.plist */,
@@ -534,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECA1F9823F50E180014023C /* CreateLikeServiceTest.swift in Sources */,
 				E0C93E942351435100FD330C /* RestClientTest.swift in Sources */,
 				E084FAF1233A8735009AC50D /* RequestBuilderTests.swift in Sources */,
 				E0458459237727D8006574FA /* CheckSumTest.swift in Sources */,
